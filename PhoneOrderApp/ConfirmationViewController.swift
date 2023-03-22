@@ -1,19 +1,19 @@
 //
-//  LocationsViewController.swift
+//  ConfirmationViewController.swift
 //  PhoneOrderApp
 //
-//  Created by Samuel Sum on 2023-03-21.
+//  Created by Po Lam Wong on 22/3/2023.
 //
 
 import UIKit
 
-class LocationsViewController: UIViewController {
+class ConfirmationViewController: UIViewController {
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    
     }
     
 
@@ -28,4 +28,3 @@ class LocationsViewController: UIViewController {
     */
 
 }
-

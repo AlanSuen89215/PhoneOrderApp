@@ -18,6 +18,23 @@
 		9194224629C9ACB7000AE4B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9194224429C9ACB7000AE4B1 /* LaunchScreen.storyboard */; };
 		9194224E29C9AE72000AE4B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9194224D29C9AE72000AE4B1 /* GoogleService-Info.plist */; };
 		ADF10C3E12EEF220E8F9EE1D /* Pods_PhoneOrderApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A866DF48F346C0387D447F22 /* Pods_PhoneOrderApp.framework */; };
+		E3C0D08129CA95E100D9B2BE /* PhoneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C0D08029CA95E100D9B2BE /* PhoneTableViewCell.swift */; };
+		E3C0D09129CA9A1900D9B2BE /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08329CA9A1900D9B2BE /* Rubik-MediumItalic.ttf */; };
+		E3C0D09229CA9A1900D9B2BE /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08429CA9A1900D9B2BE /* Rubik-Bold.ttf */; };
+		E3C0D09329CA9A1900D9B2BE /* Rubik-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08529CA9A1900D9B2BE /* Rubik-SemiBoldItalic.ttf */; };
+		E3C0D09429CA9A1900D9B2BE /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08629CA9A1900D9B2BE /* Rubik-Light.ttf */; };
+		E3C0D09529CA9A1900D9B2BE /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08729CA9A1900D9B2BE /* Rubik-Medium.ttf */; };
+		E3C0D09629CA9A1900D9B2BE /* Rubik-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08829CA9A1900D9B2BE /* Rubik-ExtraBoldItalic.ttf */; };
+		E3C0D09729CA9A1A00D9B2BE /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08929CA9A1900D9B2BE /* Rubik-Black.ttf */; };
+		E3C0D09829CA9A1A00D9B2BE /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08A29CA9A1900D9B2BE /* Rubik-Italic.ttf */; };
+		E3C0D09929CA9A1A00D9B2BE /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08B29CA9A1900D9B2BE /* Rubik-LightItalic.ttf */; };
+		E3C0D09A29CA9A1A00D9B2BE /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08C29CA9A1900D9B2BE /* Rubik-SemiBold.ttf */; };
+		E3C0D09B29CA9A1A00D9B2BE /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08D29CA9A1900D9B2BE /* Rubik-BlackItalic.ttf */; };
+		E3C0D09C29CA9A1A00D9B2BE /* Rubik-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08E29CA9A1900D9B2BE /* Rubik-ExtraBold.ttf */; };
+		E3C0D09D29CA9A1A00D9B2BE /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08F29CA9A1900D9B2BE /* Rubik-Regular.ttf */; };
+		E3C0D09E29CA9A1A00D9B2BE /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D09029CA9A1900D9B2BE /* Rubik-BoldItalic.ttf */; };
+		E3C0D0B529CAA1C800D9B2BE /* PhoneDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C0D0B429CAA1C800D9B2BE /* PhoneDetailsViewController.swift */; };
+		E3C0D0B729CABCEA00D9B2BE /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C0D0B629CABCEA00D9B2BE /* ConfirmationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +53,23 @@
 		91AB102F10E4027A30FECB91 /* Pods-PhoneOrderApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneOrderApp.debug.xcconfig"; path = "Target Support Files/Pods-PhoneOrderApp/Pods-PhoneOrderApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A866DF48F346C0387D447F22 /* Pods_PhoneOrderApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhoneOrderApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F3FE12F43FD502629888C9 /* Pods-PhoneOrderApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhoneOrderApp.release.xcconfig"; path = "Target Support Files/Pods-PhoneOrderApp/Pods-PhoneOrderApp.release.xcconfig"; sourceTree = "<group>"; };
+		E3C0D08029CA95E100D9B2BE /* PhoneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTableViewCell.swift; sourceTree = "<group>"; };
+		E3C0D08329CA9A1900D9B2BE /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
+		E3C0D08429CA9A1900D9B2BE /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		E3C0D08529CA9A1900D9B2BE /* Rubik-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		E3C0D08629CA9A1900D9B2BE /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
+		E3C0D08729CA9A1900D9B2BE /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		E3C0D08829CA9A1900D9B2BE /* Rubik-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		E3C0D08929CA9A1900D9B2BE /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
+		E3C0D08A29CA9A1900D9B2BE /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
+		E3C0D08B29CA9A1900D9B2BE /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
+		E3C0D08C29CA9A1900D9B2BE /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
+		E3C0D08D29CA9A1900D9B2BE /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
+		E3C0D08E29CA9A1900D9B2BE /* Rubik-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-ExtraBold.ttf"; sourceTree = "<group>"; };
+		E3C0D08F29CA9A1900D9B2BE /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
+		E3C0D09029CA9A1900D9B2BE /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
+		E3C0D0B429CAA1C800D9B2BE /* PhoneDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneDetailsViewController.swift; sourceTree = "<group>"; };
+		E3C0D0B629CABCEA00D9B2BE /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +115,10 @@
 			children = (
 				06AFACDF29CA3EB900EE327D /* LocationsViewController.swift */,
 				06AFACE029CA3EB900EE327D /* PhoneViewController.swift */,
+				E3C0D08029CA95E100D9B2BE /* PhoneTableViewCell.swift */,
+				E3C0D0B429CAA1C800D9B2BE /* PhoneDetailsViewController.swift */,
 				06AFACDE29CA3EB800EE327D /* ProfileViewController.swift */,
+				E3C0D0B629CABCEA00D9B2BE /* ConfirmationViewController.swift */,
 				9194223929C9ACB5000AE4B1 /* AppDelegate.swift */,
 				9194223B29C9ACB5000AE4B1 /* SceneDelegate.swift */,
 				9194223D29C9ACB5000AE4B1 /* ViewController.swift */,
@@ -90,6 +127,7 @@
 				9194224429C9ACB7000AE4B1 /* LaunchScreen.storyboard */,
 				9194224D29C9AE72000AE4B1 /* GoogleService-Info.plist */,
 				9194224729C9ACB7000AE4B1 /* Info.plist */,
+				E3C0D08229CA9A1900D9B2BE /* static */,
 			);
 			path = PhoneOrderApp;
 			sourceTree = "<group>";
@@ -101,6 +139,27 @@
 				B3F3FE12F43FD502629888C9 /* Pods-PhoneOrderApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E3C0D08229CA9A1900D9B2BE /* static */ = {
+			isa = PBXGroup;
+			children = (
+				E3C0D08329CA9A1900D9B2BE /* Rubik-MediumItalic.ttf */,
+				E3C0D08429CA9A1900D9B2BE /* Rubik-Bold.ttf */,
+				E3C0D08529CA9A1900D9B2BE /* Rubik-SemiBoldItalic.ttf */,
+				E3C0D08629CA9A1900D9B2BE /* Rubik-Light.ttf */,
+				E3C0D08729CA9A1900D9B2BE /* Rubik-Medium.ttf */,
+				E3C0D08829CA9A1900D9B2BE /* Rubik-ExtraBoldItalic.ttf */,
+				E3C0D08929CA9A1900D9B2BE /* Rubik-Black.ttf */,
+				E3C0D08A29CA9A1900D9B2BE /* Rubik-Italic.ttf */,
+				E3C0D08B29CA9A1900D9B2BE /* Rubik-LightItalic.ttf */,
+				E3C0D08C29CA9A1900D9B2BE /* Rubik-SemiBold.ttf */,
+				E3C0D08D29CA9A1900D9B2BE /* Rubik-BlackItalic.ttf */,
+				E3C0D08E29CA9A1900D9B2BE /* Rubik-ExtraBold.ttf */,
+				E3C0D08F29CA9A1900D9B2BE /* Rubik-Regular.ttf */,
+				E3C0D09029CA9A1900D9B2BE /* Rubik-BoldItalic.ttf */,
+			);
+			path = static;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,9 +223,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				9194224629C9ACB7000AE4B1 /* LaunchScreen.storyboard in Resources */,
+				E3C0D09229CA9A1900D9B2BE /* Rubik-Bold.ttf in Resources */,
 				9194224E29C9AE72000AE4B1 /* GoogleService-Info.plist in Resources */,
+				E3C0D09729CA9A1A00D9B2BE /* Rubik-Black.ttf in Resources */,
+				E3C0D09129CA9A1900D9B2BE /* Rubik-MediumItalic.ttf in Resources */,
+				E3C0D09B29CA9A1A00D9B2BE /* Rubik-BlackItalic.ttf in Resources */,
 				9194224329C9ACB7000AE4B1 /* Assets.xcassets in Resources */,
+				E3C0D09E29CA9A1A00D9B2BE /* Rubik-BoldItalic.ttf in Resources */,
+				E3C0D09429CA9A1900D9B2BE /* Rubik-Light.ttf in Resources */,
+				E3C0D09929CA9A1A00D9B2BE /* Rubik-LightItalic.ttf in Resources */,
+				E3C0D09529CA9A1900D9B2BE /* Rubik-Medium.ttf in Resources */,
+				E3C0D09829CA9A1A00D9B2BE /* Rubik-Italic.ttf in Resources */,
 				9194224129C9ACB5000AE4B1 /* Main.storyboard in Resources */,
+				E3C0D09629CA9A1900D9B2BE /* Rubik-ExtraBoldItalic.ttf in Resources */,
+				E3C0D09D29CA9A1A00D9B2BE /* Rubik-Regular.ttf in Resources */,
+				E3C0D09329CA9A1900D9B2BE /* Rubik-SemiBoldItalic.ttf in Resources */,
+				E3C0D09C29CA9A1A00D9B2BE /* Rubik-ExtraBold.ttf in Resources */,
+				E3C0D09A29CA9A1A00D9B2BE /* Rubik-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +294,10 @@
 			files = (
 				9194223E29C9ACB5000AE4B1 /* ViewController.swift in Sources */,
 				06AFACE229CA3EB900EE327D /* LocationsViewController.swift in Sources */,
+				E3C0D08129CA95E100D9B2BE /* PhoneTableViewCell.swift in Sources */,
+				E3C0D0B729CABCEA00D9B2BE /* ConfirmationViewController.swift in Sources */,
 				9194223A29C9ACB5000AE4B1 /* AppDelegate.swift in Sources */,
+				E3C0D0B529CAA1C800D9B2BE /* PhoneDetailsViewController.swift in Sources */,
 				06AFACE329CA3EB900EE327D /* PhoneViewController.swift in Sources */,
 				06AFACE129CA3EB900EE327D /* ProfileViewController.swift in Sources */,
 				9194223C29C9ACB5000AE4B1 /* SceneDelegate.swift in Sources */,
