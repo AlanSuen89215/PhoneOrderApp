@@ -11,7 +11,7 @@ class PhoneViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     let phone_model: [String] = ["iPhone 14 Pro Max", "iPhone 14 Pro","iPhone 14","iPhone 13 Pro Max","iPhone 13 Pro","iPhone 13"]
     
-    let cellReuseIdentifier = "modelcell"
+    let cellReuseIdentifier = "cell"
     
     @IBOutlet weak var phoneTableView: UITableView!
     
@@ -31,7 +31,8 @@ class PhoneViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "modelcell", for: indexPath)
+        let cell:PhoneTableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! PhoneTableViewCell
+        cell.phoneModel.text = self.phone_model[indexPath.row]
         return cell
     }
 }

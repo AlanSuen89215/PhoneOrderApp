@@ -8,10 +8,43 @@
 import UIKit
 
 class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    @IBOutlet weak var sizeTextField: UITextField!
+    @IBOutlet weak var colorTextField: UITextField!
+    
+    let size = ["128GB", "256GB","512GB","1TB"]
+    let color = ["Deep Purple","Gold","Silver","Space Black"]
+    
+    //used picker view for drop down menu
+    var sizePickerView = UIPickerView()
+    var colorPickerView = UIPickerView()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        sizeTextField.inputView = sizePickerView
+        colorTextField.inputView = colorPickerView
+        
+        sizeTextField.placeholder = "Select Storage Size"
+        colorTextField.placeholder = "Pick your favourite Color "
+        
+        sizeTextField.textAlignment = .center
+        colorTextField.textAlignment = .center
+        
+        sizePickerView.delegate = self
+        colorPickerView.delegate = self
+        sizePickerView.dataSource = self
+        colorPickerView.dataSource = self
+        
+        sizePickerView.tag = 1
+        colorPickerView.tag = 2
+    }
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
+    //function for drop down menu
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch pickerView.tag {
         case 1:
@@ -44,35 +77,6 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
             return
         }
     }
-    
-    @IBOutlet weak var sizeTextField: UITextField!
-    @IBOutlet weak var colorTextField: UITextField!
-    
-    let size = ["128GB", "256GB","512GB","1TB"]
-    let color = ["Deep Purple","Gold","Silver","Space Black"]
-    
-    var sizePickerView = UIPickerView()
-    var colorPickerView = UIPickerView()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        sizeTextField.inputView = sizePickerView
-        colorTextField.inputView = colorPickerView
-        
-        sizeTextField.placeholder = "Select Storage Size"
-        colorTextField.placeholder = "Pick your favourite Color "
-        
-        sizeTextField.textAlignment = .center
-        colorTextField.textAlignment = .center
-        
-        sizePickerView.delegate = self
-        colorPickerView.delegate = self
-        sizePickerView.dataSource = self
-        colorPickerView.dataSource = self
-        
-        sizePickerView.tag = 1
-        colorPickerView.tag = 2
-    }
 }
 
