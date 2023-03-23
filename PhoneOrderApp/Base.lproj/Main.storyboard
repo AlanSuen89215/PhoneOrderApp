@@ -40,21 +40,19 @@
         <!--Phone-->
         <scene sceneID="5o3-Ca-TLt">
             <objects>
-                <viewController storyboardIdentifier="PhoneViewController" title="Phone" id="lAR-e4-UZt" customClass="PhoneViewController" customModule="PhoneOrderApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhoneViewController" title="Phone" automaticallyAdjustsScrollViewInsets="NO" id="lAR-e4-UZt" customClass="PhoneViewController" customModule="PhoneOrderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zF2-GL-kkk">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tzl-3R-RTT">
-                                <rect key="frame" x="0.0" y="59" width="430" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tzl-3R-RTT">
+                                <rect key="frame" x="-1" y="59" width="431" height="44"/>
                                 <items>
                                     <navigationItem title="Phone" id="HIj-qj-zfH"/>
                                 </items>
                             </navigationBar>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Na7-9v-s11" userLabel="brand_selector">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Na7-9v-s11" userLabel="brand_selector">
                                 <rect key="frame" x="65" y="131" width="300" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.92156863209999995" green="0.270588249" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <segments>
                                     <segment title="Apple"/>
@@ -63,10 +61,12 @@
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="brandSwitch:" destination="lAR-e4-UZt" eventType="valueChanged" id="KTC-EL-P6J"/>
+                                </connections>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xD1-Ws-ENQ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xD1-Ws-ENQ">
                                 <rect key="frame" x="20" y="175" width="390" height="674"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="120" id="7py-rl-0Wq" customClass="PhoneTableViewCell" customModule="PhoneOrderApp" customModuleProvider="target">
@@ -76,25 +76,34 @@
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zcf-jU-8JK" userLabel="phone_image">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zcf-jU-8JK" userLabel="phone_image">
                                                     <rect key="frame" x="20" y="10" width="100" height="100"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="0e5-y5-X3X"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iPhone 14 Pro Max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWd-0X-bNd" userLabel="phone_model">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 14 Pro Max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWd-0X-bNd" userLabel="phone_model">
                                                     <rect key="frame" x="149" y="37" width="141" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="From: $1549" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tV-3f-uhq" userLabel="phone_price">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From: $1549" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tV-3f-uhq" userLabel="phone_price">
                                                     <rect key="frame" x="149" y="60" width="97" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1tV-3f-uhq" firstAttribute="top" secondItem="oWd-0X-bNd" secondAttribute="bottom" constant="2" id="G6C-XU-H0T"/>
+                                                <constraint firstItem="Zcf-jU-8JK" firstAttribute="top" secondItem="Uhd-NU-cGB" secondAttribute="topMargin" constant="-1" id="KJu-hD-U6N"/>
+                                                <constraint firstItem="oWd-0X-bNd" firstAttribute="top" secondItem="Uhd-NU-cGB" secondAttribute="topMargin" constant="26" id="RAr-ss-xUQ"/>
+                                                <constraint firstItem="oWd-0X-bNd" firstAttribute="leading" secondItem="1tV-3f-uhq" secondAttribute="leading" id="Xic-MD-h7D"/>
+                                                <constraint firstItem="Zcf-jU-8JK" firstAttribute="leading" secondItem="Uhd-NU-cGB" secondAttribute="leadingMargin" id="cQQ-p1-xSD"/>
+                                                <constraint firstItem="oWd-0X-bNd" firstAttribute="leading" secondItem="Zcf-jU-8JK" secondAttribute="trailing" constant="29" id="fEg-Kt-hZb"/>
+                                                <constraint firstItem="Zcf-jU-8JK" firstAttribute="centerY" secondItem="Uhd-NU-cGB" secondAttribute="centerY" id="m5O-bb-B5j"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="phoneImage" destination="Zcf-jU-8JK" id="e6q-ff-khs"/>
@@ -111,6 +120,18 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mBz-WA-KLa"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Tzl-3R-RTT" firstAttribute="top" secondItem="mBz-WA-KLa" secondAttribute="top" id="1dh-CQ-YNl"/>
+                            <constraint firstItem="Na7-9v-s11" firstAttribute="leading" secondItem="mBz-WA-KLa" secondAttribute="leading" constant="65" id="6zE-6g-mzP"/>
+                            <constraint firstItem="Tzl-3R-RTT" firstAttribute="trailing" secondItem="mBz-WA-KLa" secondAttribute="trailing" id="B0J-SR-uiE"/>
+                            <constraint firstItem="Na7-9v-s11" firstAttribute="centerX" secondItem="xD1-Ws-ENQ" secondAttribute="centerX" id="QqG-Qh-X4u"/>
+                            <constraint firstItem="xD1-Ws-ENQ" firstAttribute="bottom" secondItem="mBz-WA-KLa" secondAttribute="bottom" id="SMR-xE-sL4"/>
+                            <constraint firstItem="xD1-Ws-ENQ" firstAttribute="leading" secondItem="zF2-GL-kkk" secondAttribute="leadingMargin" id="TSr-YN-kFh"/>
+                            <constraint firstItem="Tzl-3R-RTT" firstAttribute="centerX" secondItem="Na7-9v-s11" secondAttribute="centerX" id="eX4-O7-1My"/>
+                            <constraint firstItem="xD1-Ws-ENQ" firstAttribute="top" secondItem="Na7-9v-s11" secondAttribute="bottom" constant="13" id="h2G-mv-4L6"/>
+                            <constraint firstItem="Na7-9v-s11" firstAttribute="top" secondItem="Tzl-3R-RTT" secondAttribute="bottom" constant="28" id="pyZ-zz-LsE"/>
+                            <constraint firstItem="xD1-Ws-ENQ" firstAttribute="trailing" secondItem="zF2-GL-kkk" secondAttribute="trailingMargin" id="sOW-dr-BXP"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Phone" image="iphone" catalog="system" id="UaA-1c-VEk">
                         <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -132,7 +153,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9bl-Mu-2Yi">
-                                <rect key="frame" x="-1" y="59" width="430" height="44"/>
+                                <rect key="frame" x="-1" y="59" width="429" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Phone Model" id="1PP-6X-BNz"/>
@@ -335,7 +356,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EGv-pz-Hds">
-                                <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                                <rect key="frame" x="-1" y="59" width="431" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Thank You!" id="6AJ-XW-B5j"/>
