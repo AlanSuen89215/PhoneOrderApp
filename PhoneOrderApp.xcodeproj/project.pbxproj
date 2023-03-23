@@ -35,6 +35,7 @@
 		E3C0D09E29CA9A1A00D9B2BE /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D09029CA9A1900D9B2BE /* Rubik-BoldItalic.ttf */; };
 		E3C0D0B529CAA1C800D9B2BE /* PhoneDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C0D0B429CAA1C800D9B2BE /* PhoneDetailsViewController.swift */; };
 		E3C0D0B729CABCEA00D9B2BE /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C0D0B629CABCEA00D9B2BE /* ConfirmationViewController.swift */; };
+		E3D6172129CC1B4500D9F097 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D6172029CC1B4500D9F097 /* OrderTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,16 @@
 		E3C0D09029CA9A1900D9B2BE /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
 		E3C0D0B429CAA1C800D9B2BE /* PhoneDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneDetailsViewController.swift; sourceTree = "<group>"; };
 		E3C0D0B629CABCEA00D9B2BE /* ConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
+		E3CF09B829CC1942004AFC06 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
+		E3CF09B929CC1942004AFC06 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		E3CF09BA29CC1942004AFC06 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		E3CF09BB29CC1942004AFC06 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		E3CF09BC29CC1942004AFC06 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
+		E3CF09BD29CC1943004AFC06 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		E3CF09BE29CC1943004AFC06 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
+		E3CF09BF29CC1943004AFC06 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
+		E3CF09C029CC1943004AFC06 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		E3D6172029CC1B4500D9F097 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +129,7 @@
 				E3C0D08029CA95E100D9B2BE /* PhoneTableViewCell.swift */,
 				E3C0D0B429CAA1C800D9B2BE /* PhoneDetailsViewController.swift */,
 				06AFACDE29CA3EB800EE327D /* ProfileViewController.swift */,
+				E3D6172029CC1B4500D9F097 /* OrderTableViewCell.swift */,
 				E3C0D0B629CABCEA00D9B2BE /* ConfirmationViewController.swift */,
 				9194223929C9ACB5000AE4B1 /* AppDelegate.swift */,
 				9194223B29C9ACB5000AE4B1 /* SceneDelegate.swift */,
@@ -144,6 +156,15 @@
 		E3C0D08229CA9A1900D9B2BE /* static */ = {
 			isa = PBXGroup;
 			children = (
+				E3CF09BF29CC1943004AFC06 /* Inter-Black.ttf */,
+				E3CF09BB29CC1942004AFC06 /* Inter-Bold.ttf */,
+				E3CF09B929CC1942004AFC06 /* Inter-ExtraBold.ttf */,
+				E3CF09BE29CC1943004AFC06 /* Inter-ExtraLight.ttf */,
+				E3CF09B829CC1942004AFC06 /* Inter-Light.ttf */,
+				E3CF09BD29CC1943004AFC06 /* Inter-Medium.ttf */,
+				E3CF09C029CC1943004AFC06 /* Inter-Regular.ttf */,
+				E3CF09BA29CC1942004AFC06 /* Inter-SemiBold.ttf */,
+				E3CF09BC29CC1942004AFC06 /* Inter-Thin.ttf */,
 				E3C0D08329CA9A1900D9B2BE /* Rubik-MediumItalic.ttf */,
 				E3C0D08429CA9A1900D9B2BE /* Rubik-Bold.ttf */,
 				E3C0D08529CA9A1900D9B2BE /* Rubik-SemiBoldItalic.ttf */,
@@ -298,6 +319,7 @@
 				E3C0D0B729CABCEA00D9B2BE /* ConfirmationViewController.swift in Sources */,
 				9194223A29C9ACB5000AE4B1 /* AppDelegate.swift in Sources */,
 				E3C0D0B529CAA1C800D9B2BE /* PhoneDetailsViewController.swift in Sources */,
+				E3D6172129CC1B4500D9F097 /* OrderTableViewCell.swift in Sources */,
 				06AFACE329CA3EB900EE327D /* PhoneViewController.swift in Sources */,
 				06AFACE129CA3EB900EE327D /* ProfileViewController.swift in Sources */,
 				9194223C29C9ACB5000AE4B1 /* SceneDelegate.swift in Sources */,
