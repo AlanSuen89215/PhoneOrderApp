@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -40,8 +41,8 @@
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="5bm-E9-U0t" kind="relationship" relationship="viewControllers" id="ow6-EC-FIH"/>
-                        <segue destination="VRY-ZG-8Id" kind="relationship" relationship="viewControllers" id="RnJ-3z-Yls"/>
+                        <segue destination="lAR-e4-UZt" kind="relationship" relationship="viewControllers" id="ow6-EC-FIH"/>
+                        <segue destination="SM5-y8-fbr" kind="relationship" relationship="viewControllers" id="RnJ-3z-Yls"/>
                         <segue destination="TFh-g3-7Sh" kind="relationship" relationship="viewControllers" id="IdK-xE-Aj8"/>
                     </connections>
                 </tabBarController>
@@ -408,24 +409,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNG-Zo-Hl1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3604.1860465116279" y="-302.57510729613733"/>
-        </scene>
-        <!--Locations-->
-        <scene sceneID="7jL-ur-PkK">
-            <objects>
-                <viewController storyboardIdentifier="LocationsViewController" title="Locations" id="VRY-ZG-8Id" customClass="LocationsViewController" customModule="PhoneOrderApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Fzq-Pl-15M">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="8EY-Kz-SX8"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Locations" image="map" catalog="system" id="R9Y-bT-gG0">
-                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OeY-3e-tHh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-23.076923076923077" y="379.62085308056868"/>
         </scene>
         <!--Profile-->
         <scene sceneID="E1O-0r-VRh">
@@ -806,20 +789,188 @@
             </objects>
             <point key="canvasLocation" x="-23.720930232558139" y="-301.93133047210301"/>
         </scene>
+        <!--Locations-->
+        <scene sceneID="Dpm-Im-R0h">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SM5-y8-fbr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Locations" image="map" catalog="system" id="R9Y-bT-gG0">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tIF-YQ-xm4">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VRY-ZG-8Id" kind="relationship" relationship="rootViewController" id="dT3-wZ-uEe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="72h-FG-mlk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.076923076923077" y="379.62085308056868"/>
+        </scene>
+        <!--Locations-->
+        <scene sceneID="7jL-ur-PkK">
+            <objects>
+                <viewController storyboardIdentifier="LocationsViewController" title="Locations" id="VRY-ZG-8Id" customClass="LocationsViewController" customModule="PhoneOrderApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fzq-Pl-15M">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CtT-ys-5GI">
+                                <rect key="frame" x="0.0" y="148" width="390" height="613"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MP7-Gy-QUl">
+                                <rect key="frame" x="40" y="100" width="310" height="32"/>
+                                <color key="backgroundColor" red="0.86396181579999998" green="0.25294351580000002" blue="0.349065721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <segments>
+                                    <segment title="Apple"/>
+                                    <segment title="Google"/>
+                                    <segment title="Samsumg"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="selectedSegmentTintColor" red="0.92469751830000002" green="0.94589835410000001" blue="0.97401815650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="indexChanged:" destination="VRY-ZG-8Id" eventType="valueChanged" id="wyO-1H-FEj"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8EY-Kz-SX8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CtT-ys-5GI" firstAttribute="bottom" secondItem="8EY-Kz-SX8" secondAttribute="bottom" id="2TS-AL-Ozb"/>
+                            <constraint firstItem="CtT-ys-5GI" firstAttribute="leading" secondItem="8EY-Kz-SX8" secondAttribute="leading" id="BTh-SO-Rc9"/>
+                            <constraint firstItem="MP7-Gy-QUl" firstAttribute="top" secondItem="8EY-Kz-SX8" secondAttribute="top" constant="9" id="H4x-Az-3Kx"/>
+                            <constraint firstItem="MP7-Gy-QUl" firstAttribute="leading" secondItem="8EY-Kz-SX8" secondAttribute="leading" constant="40" id="Wls-l9-R4z"/>
+                            <constraint firstItem="CtT-ys-5GI" firstAttribute="top" secondItem="MP7-Gy-QUl" secondAttribute="bottom" constant="17" id="m5K-nX-HYw"/>
+                            <constraint firstItem="MP7-Gy-QUl" firstAttribute="centerX" secondItem="Fzq-Pl-15M" secondAttribute="centerX" id="qv6-yN-nec"/>
+                            <constraint firstItem="MP7-Gy-QUl" firstAttribute="centerX" secondItem="CtT-ys-5GI" secondAttribute="centerX" id="vsw-Qp-YTJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Locations" id="ULR-0I-hFO"/>
+                    <connections>
+                        <outlet property="mapView" destination="CtT-ys-5GI" id="eCC-7J-5Le"/>
+                        <outlet property="segmentedControl" destination="MP7-Gy-QUl" id="9oo-U1-skr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OeY-3e-tHh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="906.15384615384608" y="379.62085308056868"/>
+        </scene>
+        <!--Store Detail View Controller-->
+        <scene sceneID="YTM-wL-27I">
+            <objects>
+                <viewController storyboardIdentifier="StoreDetailViewController" id="ovF-4p-H4y" customClass="StoreDetailViewController" customModule="PhoneOrderApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VCX-ID-z21">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARN-vF-APi">
+                                <rect key="frame" x="21" y="62.000000000000007" width="348" height="31.333333333333336"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="348" id="sEA-8b-hfp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6g-FT-LKn">
+                                <rect key="frame" x="21" y="94" width="348" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OPENING HOURS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpD-bs-43z">
+                                <rect key="frame" x="21" y="142" width="348" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7BI-U3-KdL">
+                                <rect key="frame" x="21" y="165" width="348" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hx4-AX-gba">
+                                <rect key="frame" x="21" y="217" width="348" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zxc-Wu-PLY">
+                                <rect key="frame" x="21" y="235" width="348" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Zuy-zj-cLa">
+                                <rect key="frame" x="21" y="261.66666666666674" width="22" height="19.999999999999943"/>
+                                <color key="tintColor" systemColor="systemBlueColor"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAe-XP-7Od">
+                                <rect key="frame" x="51" y="261" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NlT-cv-KUA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y6g-FT-LKn" firstAttribute="trailing" secondItem="ARN-vF-APi" secondAttribute="trailing" id="7ab-SG-A9E"/>
+                            <constraint firstItem="SpD-bs-43z" firstAttribute="leading" secondItem="ARN-vF-APi" secondAttribute="leading" id="BoF-3g-SbP"/>
+                            <constraint firstItem="Zuy-zj-cLa" firstAttribute="leading" secondItem="ARN-vF-APi" secondAttribute="leading" id="FUd-j7-yjL"/>
+                            <constraint firstItem="Zuy-zj-cLa" firstAttribute="top" secondItem="Zxc-Wu-PLY" secondAttribute="bottom" constant="6.6666666666666856" id="InW-bR-zvc"/>
+                            <constraint firstItem="Zxc-Wu-PLY" firstAttribute="trailing" secondItem="ARN-vF-APi" secondAttribute="trailing" id="JYV-Wq-CBo"/>
+                            <constraint firstItem="EAe-XP-7Od" firstAttribute="top" secondItem="Zxc-Wu-PLY" secondAttribute="bottom" constant="5.6666666666666856" id="Juo-oE-tRi"/>
+                            <constraint firstItem="EAe-XP-7Od" firstAttribute="leading" secondItem="Zuy-zj-cLa" secondAttribute="trailing" constant="8" id="KQr-vM-ied"/>
+                            <constraint firstItem="hx4-AX-gba" firstAttribute="trailing" secondItem="ARN-vF-APi" secondAttribute="trailing" id="LXf-h6-SFQ"/>
+                            <constraint firstItem="Y6g-FT-LKn" firstAttribute="leading" secondItem="ARN-vF-APi" secondAttribute="leading" id="LZk-ed-2lj"/>
+                            <constraint firstItem="ARN-vF-APi" firstAttribute="leading" secondItem="NlT-cv-KUA" secondAttribute="leading" constant="21" id="Lsu-k9-qD1"/>
+                            <constraint firstItem="7BI-U3-KdL" firstAttribute="leading" secondItem="ARN-vF-APi" secondAttribute="leading" id="Mpy-xO-aeQ"/>
+                            <constraint firstItem="hx4-AX-gba" firstAttribute="top" secondItem="7BI-U3-KdL" secondAttribute="bottom" constant="31.666666666666657" id="aGh-4I-nxO"/>
+                            <constraint firstItem="Y6g-FT-LKn" firstAttribute="top" secondItem="ARN-vF-APi" secondAttribute="bottom" constant="0.66666666666665719" id="b3G-pJ-G15"/>
+                            <constraint firstItem="NlT-cv-KUA" firstAttribute="trailing" secondItem="ARN-vF-APi" secondAttribute="trailing" constant="21" id="g0f-3b-Nmt"/>
+                            <constraint firstItem="SpD-bs-43z" firstAttribute="trailing" secondItem="ARN-vF-APi" secondAttribute="trailing" id="iDM-Zw-Ltf"/>
+                            <constraint firstItem="7BI-U3-KdL" firstAttribute="trailing" secondItem="ARN-vF-APi" secondAttribute="trailing" id="n5h-Yl-169"/>
+                            <constraint firstItem="7BI-U3-KdL" firstAttribute="top" secondItem="SpD-bs-43z" secondAttribute="bottom" constant="2" id="q0O-M4-2GA"/>
+                            <constraint firstItem="hx4-AX-gba" firstAttribute="leading" secondItem="ARN-vF-APi" secondAttribute="leading" id="rwn-Sj-gSd"/>
+                            <constraint firstItem="SpD-bs-43z" firstAttribute="top" secondItem="Y6g-FT-LKn" secondAttribute="bottom" constant="27.666666666666657" id="seJ-3h-ZJj"/>
+                            <constraint firstItem="Zxc-Wu-PLY" firstAttribute="leading" secondItem="ARN-vF-APi" secondAttribute="leading" id="uIr-Zg-juL"/>
+                            <constraint firstItem="Zxc-Wu-PLY" firstAttribute="top" secondItem="hx4-AX-gba" secondAttribute="bottom" constant="-3" id="uLz-n9-GNR"/>
+                            <constraint firstItem="ARN-vF-APi" firstAttribute="top" secondItem="NlT-cv-KUA" secondAttribute="top" constant="15" id="v7B-6W-gUl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lblAddress" destination="Y6g-FT-LKn" id="l7o-jt-7CB"/>
+                        <outlet property="lblHours" destination="7BI-U3-KdL" id="IOZ-V3-W5P"/>
+                        <outlet property="lblName" destination="ARN-vF-APi" id="Lwh-qL-93x"/>
+                        <outlet property="lblPhone" destination="Zxc-Wu-PLY" id="MS5-aU-8xb"/>
+                        <outlet property="lblRating" destination="EAe-XP-7Od" id="f0n-Sk-ikm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s9H-ea-6oy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1833.8461538461538" y="379.62085308056868"/>
+        </scene>
     </scenes>
     <resources>
         <image name="cart" width="631" height="367"/>
         <image name="iphone" catalog="system" width="112" height="128"/>
         <image name="map" catalog="system" width="128" height="112"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
