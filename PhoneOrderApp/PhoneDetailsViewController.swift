@@ -11,6 +11,8 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
     
     @IBOutlet weak var sizeTextField: UITextField!
     @IBOutlet weak var colorTextField: UITextField!
+    @IBOutlet weak var phoneImageView: UIImageView!
+    @IBOutlet weak var phoneLabel: UILabel!
     
     let size = ["128GB", "256GB","512GB","1TB"]
     let color = ["Deep Purple","Gold","Silver","Space Black"]
@@ -18,6 +20,9 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
     //used picker view for drop down menu
     var sizePickerView = UIPickerView()
     var colorPickerView = UIPickerView()
+    
+    var phoneImage = UIImage()
+    var phoneName = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +43,9 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
         
         sizePickerView.tag = 1
         colorPickerView.tag = 2
+        
+        phoneLabel.text = phoneName
+        phoneImageView.image = phoneImage
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

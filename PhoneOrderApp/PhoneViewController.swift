@@ -16,6 +16,7 @@ class PhoneViewController: UIViewController, UITableViewDelegate, UITableViewDat
     let cellReuseIdentifier = "cell"
     var currentTableView: Int!
     
+    @IBOutlet weak var brandSegmentedControl: UISegmentedControl!
     @IBOutlet weak var phoneTableView: UITableView!
     
     override func viewDidLoad() {
@@ -24,6 +25,9 @@ class PhoneViewController: UIViewController, UITableViewDelegate, UITableViewDat
         phoneTableView.dataSource = self
         phoneTableView.delegate = self
         currentTableView = 0
+        
+        brandSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: UIControl.State.selected)
+        brandSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.normal)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -42,10 +46,16 @@ class PhoneViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let phoneDetails = storyboard?.instantiateViewController(identifier:"PhoneDetailsViewController") as? PhoneDetailsViewController {
+            phoneDetails.phoneImage = UIImage(named: phone_image[currentTableView][indexPath.row])!
+            phoneDetails.phoneName = phone_model[currentTableView][indexPath.row]
+            self.navigationController?.pushViewController(phoneDetails, animated: true)
+        }
+    }
+    
     @IBAction func brandSwitch(_ sender: UISegmentedControl) {
         currentTableView = sender.selectedSegmentIndex
         phoneTableView.reloadData()
     }
-    
-
 }

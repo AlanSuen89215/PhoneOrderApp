@@ -40,7 +40,7 @@
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="lAR-e4-UZt" kind="relationship" relationship="viewControllers" id="ow6-EC-FIH"/>
+                        <segue destination="5bm-E9-U0t" kind="relationship" relationship="viewControllers" id="ow6-EC-FIH"/>
                         <segue destination="VRY-ZG-8Id" kind="relationship" relationship="viewControllers" id="RnJ-3z-Yls"/>
                         <segue destination="TFh-g3-7Sh" kind="relationship" relationship="viewControllers" id="IdK-xE-Aj8"/>
                     </connections>
@@ -57,28 +57,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tzl-3R-RTT">
-                                <rect key="frame" x="-1" y="59" width="431" height="44"/>
-                                <items>
-                                    <navigationItem title="Phone" id="HIj-qj-zfH"/>
-                                </items>
-                            </navigationBar>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Na7-9v-s11" userLabel="brand_selector">
-                                <rect key="frame" x="65" y="131" width="300" height="32"/>
-                                <color key="backgroundColor" red="0.92156863209999995" green="0.270588249" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <segments>
-                                    <segment title="Apple"/>
-                                    <segment title="Google"/>
-                                    <segment title="Samsung"/>
-                                </segments>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <action selector="brandSwitch:" destination="lAR-e4-UZt" eventType="valueChanged" id="KTC-EL-P6J"/>
-                                </connections>
-                            </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xD1-Ws-ENQ">
-                                <rect key="frame" x="20" y="175" width="390" height="674"/>
+                                <rect key="frame" x="20" y="191" width="390" height="658"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="120" id="7py-rl-0Wq" customClass="PhoneTableViewCell" customModule="PhoneOrderApp" customModuleProvider="target">
@@ -91,7 +71,7 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zcf-jU-8JK" userLabel="phone_image">
                                                     <rect key="frame" x="20" y="10" width="100" height="100"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="0e5-y5-X3X"/>
+                                                        <constraint firstAttribute="width" constant="100" id="b8T-Pt-XBD"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 14 Pro Max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWd-0X-bNd" userLabel="phone_model">
@@ -108,13 +88,13 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="1tV-3f-uhq" firstAttribute="top" secondItem="oWd-0X-bNd" secondAttribute="bottom" constant="2" id="G6C-XU-H0T"/>
-                                                <constraint firstItem="Zcf-jU-8JK" firstAttribute="top" secondItem="Uhd-NU-cGB" secondAttribute="topMargin" constant="-1" id="KJu-hD-U6N"/>
-                                                <constraint firstItem="oWd-0X-bNd" firstAttribute="top" secondItem="Uhd-NU-cGB" secondAttribute="topMargin" constant="26" id="RAr-ss-xUQ"/>
-                                                <constraint firstItem="oWd-0X-bNd" firstAttribute="leading" secondItem="1tV-3f-uhq" secondAttribute="leading" id="Xic-MD-h7D"/>
-                                                <constraint firstItem="Zcf-jU-8JK" firstAttribute="leading" secondItem="Uhd-NU-cGB" secondAttribute="leadingMargin" id="cQQ-p1-xSD"/>
-                                                <constraint firstItem="oWd-0X-bNd" firstAttribute="leading" secondItem="Zcf-jU-8JK" secondAttribute="trailing" constant="29" id="fEg-Kt-hZb"/>
-                                                <constraint firstItem="Zcf-jU-8JK" firstAttribute="centerY" secondItem="Uhd-NU-cGB" secondAttribute="centerY" id="m5O-bb-B5j"/>
+                                                <constraint firstItem="oWd-0X-bNd" firstAttribute="top" secondItem="Uhd-NU-cGB" secondAttribute="topMargin" constant="26" id="7XQ-3l-6En"/>
+                                                <constraint firstItem="Zcf-jU-8JK" firstAttribute="centerY" secondItem="Uhd-NU-cGB" secondAttribute="centerY" id="9Rx-eA-5YR"/>
+                                                <constraint firstItem="oWd-0X-bNd" firstAttribute="leading" secondItem="1tV-3f-uhq" secondAttribute="leading" id="Ncb-eN-dnG"/>
+                                                <constraint firstItem="oWd-0X-bNd" firstAttribute="leading" secondItem="Zcf-jU-8JK" secondAttribute="trailing" constant="29" id="Q4E-AB-fYu"/>
+                                                <constraint firstItem="1tV-3f-uhq" firstAttribute="top" secondItem="oWd-0X-bNd" secondAttribute="bottom" constant="2" id="goZ-nm-RdW"/>
+                                                <constraint firstItem="Zcf-jU-8JK" firstAttribute="top" secondItem="Uhd-NU-cGB" secondAttribute="topMargin" constant="-1" id="hJi-97-odD"/>
+                                                <constraint firstItem="Zcf-jU-8JK" firstAttribute="leading" secondItem="Uhd-NU-cGB" secondAttribute="leadingMargin" id="yX2-se-cMb"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -129,32 +109,48 @@
                                     <outlet property="delegate" destination="lAR-e4-UZt" id="U5Z-sa-S8m"/>
                                 </connections>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Na7-9v-s11" userLabel="brand_selector">
+                                <rect key="frame" x="65" y="131" width="300" height="32"/>
+                                <color key="backgroundColor" red="0.92156863209999995" green="0.270588249" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <segments>
+                                    <segment title="Apple"/>
+                                    <segment title="Google"/>
+                                    <segment title="Samsung"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="brandSwitch:" destination="lAR-e4-UZt" eventType="valueChanged" id="KTC-EL-P6J"/>
+                                </connections>
+                            </segmentedControl>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZG-mW-Hzw">
+                                <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mBz-WA-KLa"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Tzl-3R-RTT" firstAttribute="top" secondItem="mBz-WA-KLa" secondAttribute="top" id="1dh-CQ-YNl"/>
-                            <constraint firstItem="Na7-9v-s11" firstAttribute="leading" secondItem="mBz-WA-KLa" secondAttribute="leading" constant="65" id="6zE-6g-mzP"/>
-                            <constraint firstItem="Tzl-3R-RTT" firstAttribute="trailing" secondItem="mBz-WA-KLa" secondAttribute="trailing" id="B0J-SR-uiE"/>
-                            <constraint firstItem="Na7-9v-s11" firstAttribute="centerX" secondItem="xD1-Ws-ENQ" secondAttribute="centerX" id="QqG-Qh-X4u"/>
-                            <constraint firstItem="xD1-Ws-ENQ" firstAttribute="bottom" secondItem="mBz-WA-KLa" secondAttribute="bottom" id="SMR-xE-sL4"/>
-                            <constraint firstItem="xD1-Ws-ENQ" firstAttribute="leading" secondItem="zF2-GL-kkk" secondAttribute="leadingMargin" id="TSr-YN-kFh"/>
-                            <constraint firstItem="Tzl-3R-RTT" firstAttribute="centerX" secondItem="Na7-9v-s11" secondAttribute="centerX" id="eX4-O7-1My"/>
-                            <constraint firstItem="xD1-Ws-ENQ" firstAttribute="top" secondItem="Na7-9v-s11" secondAttribute="bottom" constant="13" id="h2G-mv-4L6"/>
-                            <constraint firstItem="Na7-9v-s11" firstAttribute="top" secondItem="Tzl-3R-RTT" secondAttribute="bottom" constant="28" id="pyZ-zz-LsE"/>
-                            <constraint firstItem="xD1-Ws-ENQ" firstAttribute="trailing" secondItem="zF2-GL-kkk" secondAttribute="trailingMargin" id="sOW-dr-BXP"/>
+                            <constraint firstItem="Na7-9v-s11" firstAttribute="top" secondItem="VZG-mW-Hzw" secondAttribute="bottom" constant="28" id="0vF-ni-hhe"/>
+                            <constraint firstItem="Na7-9v-s11" firstAttribute="leading" secondItem="mBz-WA-KLa" secondAttribute="leading" constant="65" id="4bC-Nm-LIO"/>
+                            <constraint firstItem="mBz-WA-KLa" firstAttribute="bottom" secondItem="xD1-Ws-ENQ" secondAttribute="bottom" id="6Gh-Lw-rQ7"/>
+                            <constraint firstItem="VZG-mW-Hzw" firstAttribute="leading" secondItem="zF2-GL-kkk" secondAttribute="leadingMargin" constant="-20" id="6dN-SE-6t7"/>
+                            <constraint firstItem="Na7-9v-s11" firstAttribute="centerX" secondItem="xD1-Ws-ENQ" secondAttribute="centerX" id="OaL-Ep-fK2"/>
+                            <constraint firstItem="xD1-Ws-ENQ" firstAttribute="trailing" secondItem="zF2-GL-kkk" secondAttribute="trailingMargin" id="VTW-Tm-V8u"/>
+                            <constraint firstItem="xD1-Ws-ENQ" firstAttribute="top" secondItem="Na7-9v-s11" secondAttribute="bottom" constant="29" id="Xz4-AO-yg0"/>
+                            <constraint firstItem="VZG-mW-Hzw" firstAttribute="top" secondItem="zF2-GL-kkk" secondAttribute="topMargin" constant="-44" id="ezc-Qc-oF0"/>
+                            <constraint firstItem="xD1-Ws-ENQ" firstAttribute="leading" secondItem="zF2-GL-kkk" secondAttribute="leadingMargin" id="ggG-33-eOV"/>
+                            <constraint firstItem="VZG-mW-Hzw" firstAttribute="centerX" secondItem="Na7-9v-s11" secondAttribute="centerX" id="nw6-rr-jRq"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Phone" image="iphone" catalog="system" id="UaA-1c-VEk">
-                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Phone" id="LXF-Iw-0Q1"/>
                     <connections>
+                        <outlet property="brandSegmentedControl" destination="Na7-9v-s11" id="HOo-Sf-c9d"/>
                         <outlet property="phoneTableView" destination="xD1-Ws-ENQ" id="302-cV-EAs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OL0-NJ-j4L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23.720930232558139" y="-301.93133047210301"/>
+            <point key="canvasLocation" x="874.88372093023258" y="-301.93133047210301"/>
         </scene>
         <!--Phone Details-->
         <scene sceneID="gvQ-Ib-qEw">
@@ -164,13 +160,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9bl-Mu-2Yi">
-                                <rect key="frame" x="-2" y="59" width="429" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Phone Model" id="1PP-6X-BNz"/>
-                                </items>
-                            </navigationBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PxZ-rY-8BH">
                                 <rect key="frame" x="115" y="199" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -194,7 +183,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price: $1549" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MC-vk-CKa">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price: $1549" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MC-vk-CKa" userLabel="priceLabel">
                                 <rect key="frame" x="164" y="586" width="102" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
@@ -208,20 +197,30 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="CONTINUE">
                                     <fontDescription key="titleFontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
+                                    <color key="baseBackgroundColor" red="0.92156863209999995" green="0.270588249" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iPhone 14 Pro Max" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkc-cC-dIb" userLabel="phoneLabel">
+                                <rect key="frame" x="127" y="153" width="176" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dlk-9f-pKR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="colorTextField" destination="4V3-zb-H1h" id="vBw-kB-bLl"/>
+                        <outlet property="phoneImageView" destination="PxZ-rY-8BH" id="QDq-Dp-OqH"/>
+                        <outlet property="phoneLabel" destination="tkc-cC-dIb" id="KKg-a6-C1f"/>
                         <outlet property="sizeTextField" destination="iE3-89-a6d" id="sQE-mc-zbJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wEL-Qq-5yg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="913.95348837209303" y="-302.57510729613733"/>
+            <point key="canvasLocation" x="1812.5581395348836" y="-302.57510729613733"/>
         </scene>
         <!--Confirmation View Controller-->
         <scene sceneID="qYT-PO-0G4">
@@ -357,7 +356,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OZs-qi-3xG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1823.7209302325582" y="-303.21888412017171"/>
+            <point key="canvasLocation" x="2722.3255813953488" y="-303.21888412017171"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Zvf-T7-9bb">
@@ -368,7 +367,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EGv-pz-Hds">
-                                <rect key="frame" x="-1" y="59" width="431" height="44"/>
+                                <rect key="frame" x="-2" y="59" width="432" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Thank You!" id="6AJ-XW-B5j"/>
@@ -408,7 +407,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wNG-Zo-Hl1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2705.5813953488373" y="-302.57510729613733"/>
+            <point key="canvasLocation" x="3604.1860465116279" y="-302.57510729613733"/>
         </scene>
         <!--Locations-->
         <scene sceneID="7jL-ur-PkK">
@@ -785,6 +784,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1SF-zO-0Zy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2027.4418604651162" y="1084.7639484978542"/>
+        </scene>
+        <!--Phone-->
+        <scene sceneID="ElB-am-SjY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5bm-E9-U0t" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Phone" image="iphone" catalog="system" id="UaA-1c-VEk">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mxY-zT-bPd">
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lAR-e4-UZt" kind="relationship" relationship="rootViewController" id="cdc-SB-nZi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gfo-RL-dnY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.720930232558139" y="-301.93133047210301"/>
         </scene>
     </scenes>
     <resources>
