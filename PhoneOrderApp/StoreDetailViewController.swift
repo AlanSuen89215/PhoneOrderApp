@@ -16,7 +16,7 @@ class StoreDetailViewController: UIViewController {
     @IBOutlet weak var lblAddress: UILabel!
     @IBOutlet weak var lblHours: UILabel!
     @IBOutlet weak var lblPhone: UILabel!
-    @IBOutlet weak var lblRating: UILabel!
+    @IBOutlet weak var lblWebsite: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class StoreDetailViewController: UIViewController {
         lblAddress.text = store.address
         lblHours.text = store.hours
         lblPhone.text = store.phone
-        lblRating.text = store.rating
+        lblWebsite.text = store.website
     }
     
 }
