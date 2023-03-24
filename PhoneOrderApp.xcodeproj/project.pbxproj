@@ -10,6 +10,7 @@
 		06AFACE129CA3EB900EE327D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AFACDE29CA3EB800EE327D /* ProfileViewController.swift */; };
 		06AFACE229CA3EB900EE327D /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AFACDF29CA3EB900EE327D /* LocationsViewController.swift */; };
 		06AFACE329CA3EB900EE327D /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AFACE029CA3EB900EE327D /* PhoneViewController.swift */; };
+		06BF50CC29CB6CEB00BC39BD /* StoreDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06BF50CB29CB6CEB00BC39BD /* StoreDetailViewController.swift */; };
 		9194223A29C9ACB5000AE4B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9194223929C9ACB5000AE4B1 /* AppDelegate.swift */; };
 		9194223C29C9ACB5000AE4B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9194223B29C9ACB5000AE4B1 /* SceneDelegate.swift */; };
 		9194223E29C9ACB5000AE4B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9194223D29C9ACB5000AE4B1 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 		06AFACDE29CA3EB800EE327D /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		06AFACDF29CA3EB900EE327D /* LocationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		06AFACE029CA3EB900EE327D /* PhoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
+		06BF50CB29CB6CEB00BC39BD /* StoreDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailViewController.swift; sourceTree = "<group>"; };
 		9194223629C9ACB5000AE4B1 /* PhoneOrderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhoneOrderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9194223929C9ACB5000AE4B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9194223B29C9ACB5000AE4B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				06AFACDF29CA3EB900EE327D /* LocationsViewController.swift */,
 				06AFACE029CA3EB900EE327D /* PhoneViewController.swift */,
 				06AFACDE29CA3EB800EE327D /* ProfileViewController.swift */,
+				06BF50CB29CB6CEB00BC39BD /* StoreDetailViewController.swift */,
 				9194223929C9ACB5000AE4B1 /* AppDelegate.swift */,
 				9194223B29C9ACB5000AE4B1 /* SceneDelegate.swift */,
 				9194223D29C9ACB5000AE4B1 /* ViewController.swift */,
@@ -224,6 +227,7 @@
 				9194223A29C9ACB5000AE4B1 /* AppDelegate.swift in Sources */,
 				06AFACE329CA3EB900EE327D /* PhoneViewController.swift in Sources */,
 				06AFACE129CA3EB900EE327D /* ProfileViewController.swift in Sources */,
+				06BF50CC29CB6CEB00BC39BD /* StoreDetailViewController.swift in Sources */,
 				9194223C29C9ACB5000AE4B1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,6 +378,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhoneOrderApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Order Phone";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need you location to give you direction to the nearby stores.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -402,6 +408,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PhoneOrderApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Order Phone";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need you location to give you direction to the nearby stores.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
