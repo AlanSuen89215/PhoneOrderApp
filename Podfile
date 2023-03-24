@@ -8,5 +8,7 @@ target 'PhoneOrderApp' do
   # Pods for PhoneOrderApp
 pod 'FirebaseCore'
 pod 'FirebaseFirestore'
+pod 'MaterialComponents/TextControls+OutlinedTextAreas'
+pod 'MaterialComponents/TextControls+OutlinedTextFields'
 
 end

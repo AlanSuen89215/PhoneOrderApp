@@ -14,10 +14,10 @@ class LocationsViewController: UIViewController, MKMapViewDelegate {
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var mapView: MKMapView!
-    
+
     fileprivate var locationManager:CLLocationManager = CLLocationManager()
     var storeDetailVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "StoreDetailViewController") as! StoreDetailViewController
-    
+
     var appleStores = [
         [
             "name": "STC Apple Store",
@@ -38,7 +38,7 @@ class LocationsViewController: UIViewController, MKMapViewDelegate {
             "lng" : "-79.2872004866518"
         ]
     ]
-    
+
     var googleStores = [
         [
             "name": "Walmart Supercentre",
@@ -68,7 +68,7 @@ class LocationsViewController: UIViewController, MKMapViewDelegate {
             "lng" : "-79.22741946870741"
         ]
     ]
-    
+
     var samsumgStores = [
         [
             "name": "Value Mobile",
@@ -89,17 +89,17 @@ class LocationsViewController: UIViewController, MKMapViewDelegate {
             "lng" : "-79.29742545717633"
         ]
     ]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         mapView.delegate = self
-        
+
         locationManager.requestWhenInUseAuthorization()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.distanceFilter = kCLDistanceFilterNone
         locationManager.startUpdatingLocation()
-        
+
         mapView.showsUserLocation = true
 
         //Zoom to user location
@@ -107,17 +107,17 @@ class LocationsViewController: UIViewController, MKMapViewDelegate {
             let viewRegion = MKCoordinateRegion(center: userLocation, latitudinalMeters: 20000, longitudinalMeters: 20000)
             mapView.setRegion(viewRegion, animated: true)
         }
-        
+
         segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: UIControl.State.selected)
         segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.normal)
         segmentedControl.selectedSegmentIndex = 0;
         segmentedControl.sendActions(for: UIControl.Event.valueChanged)
-        
+
     }
-    
+
     // Show the custom pins on the map and make the pins clickable
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-                
+
         var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: "AnnotationIdentifier") as? MKPinAnnotationView
         if !(annotation is MKUserLocation) {
             if annotationView == nil {
@@ -125,7 +125,7 @@ class LocationsViewController: UIViewController, MKMapViewDelegate {
             } else {
                 annotationView?.annotation = annotation
             }
-            
+
             if let annotation = annotation as? MyPointAnnotation {
                 annotationView?.canShowCallout = true
                 let btn = UIButton(type: .detailDisclosure)
@@ -135,7 +135,7 @@ class LocationsViewController: UIViewController, MKMapViewDelegate {
         }
         return annotationView
     }
-    
+
     // Show the bottom sheet when the pin action button is clicked
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         //guard let storesAnnotation = view.annotation as? MyPointAnnotation else { return }
@@ -155,7 +155,7 @@ class LocationsViewController: UIViewController, MKMapViewDelegate {
             self.present(storeDetailVC, animated: true, completion: nil)
         }
     }
-    
+
     // Handle the segmented button action. Change stores accrodingly
     @IBAction func indexChanged(_ sender: UISegmentedControl) {
         switch segmentedControl.selectedSegmentIndex {
@@ -174,7 +174,7 @@ class LocationsViewController: UIViewController, MKMapViewDelegate {
     func showStoresAnnotations(stores: [[String: String]], color: UIColor) {
         let annotations = mapView.annotations
         mapView.removeAnnotations(annotations)
-        
+
         for store in stores {
             if let name = store["name"], let lat = store["lat"], let lng = store["lng"] {
                 let pin = MyPointAnnotation(pinTintColor: color, name: name, address: store["address"]!, phone: store["phone"]!, hours: store["hours"]!, rating: store["rating"]!)
@@ -184,7 +184,7 @@ class LocationsViewController: UIViewController, MKMapViewDelegate {
             }
         }
     }
-    
+
 }
 
 class MyPointAnnotation : MKPointAnnotation {
@@ -195,7 +195,7 @@ class MyPointAnnotation : MKPointAnnotation {
     var phone: String
     var hours: String
     var rating: String
-    
+
     init(pinTintColor: UIColor = UIColor.black,
             name: String = "",
             address: String = "",
@@ -210,7 +210,7 @@ class MyPointAnnotation : MKPointAnnotation {
         self.hours = hours
         self.rating = rating
     }
-    
+
     func copy(original: MyPointAnnotation) {
         self.pinTintColor = original.pinTintColor
         self.name = original.name

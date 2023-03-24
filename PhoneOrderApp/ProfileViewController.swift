@@ -7,23 +7,36 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var orderTableView: UITableView!
+    
+    let status: [String] = ["Confirmed","Delivered"]
+    let model: [String] = ["iPhone 14 Pro Max","iPhone 14"]
+    let storage: [String] = ["256GB","256GB"]
+    let color: [String] = ["Deep Purple","Gold"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
     }
-    */
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return status.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell:OrderTableViewCell = tableView.dequeueReusableCell(withIdentifier: "orderCell", for: indexPath) as! OrderTableViewCell
+        cell.statusLabel.text = status[indexPath.row]
+        cell.modelLabel.text = model[indexPath.row]
+        cell.storageLabel.text = storage[indexPath.row]
+        cell.colorLabel.text = color[indexPath.row]
+        return cell
+    }
 
 }
