@@ -31,12 +31,12 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="3j5-8D-eNh" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rEq-wn-fp2">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="rEq-wn-fp2">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.19793236259999999" green="0.23254090550000001" blue="0.41749471430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" systemColor="systemGray2Color"/>
+                        <color key="backgroundColor" red="0.1725490093" green="0.20392158630000001" blue="0.38823530080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.1725490093" green="0.20392158630000001" blue="0.38823530080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
@@ -54,11 +54,11 @@
             <objects>
                 <viewController storyboardIdentifier="PhoneViewController" title="Phone" automaticallyAdjustsScrollViewInsets="NO" id="lAR-e4-UZt" customClass="PhoneViewController" customModule="PhoneOrderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zF2-GL-kkk">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xD1-Ws-ENQ">
-                                <rect key="frame" x="20" y="191" width="390" height="658"/>
+                                <rect key="frame" x="20" y="191" width="390" height="644"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="120" id="7py-rl-0Wq" customClass="PhoneTableViewCell" customModule="PhoneOrderApp" customModuleProvider="target">
@@ -132,7 +132,7 @@
                         <constraints>
                             <constraint firstItem="Na7-9v-s11" firstAttribute="top" secondItem="VZG-mW-Hzw" secondAttribute="bottom" constant="28" id="0vF-ni-hhe"/>
                             <constraint firstItem="Na7-9v-s11" firstAttribute="leading" secondItem="mBz-WA-KLa" secondAttribute="leading" constant="65" id="4bC-Nm-LIO"/>
-                            <constraint firstItem="mBz-WA-KLa" firstAttribute="bottom" secondItem="xD1-Ws-ENQ" secondAttribute="bottom" id="6Gh-Lw-rQ7"/>
+                            <constraint firstItem="mBz-WA-KLa" firstAttribute="bottom" secondItem="xD1-Ws-ENQ" secondAttribute="bottom" constant="14" id="6Gh-Lw-rQ7"/>
                             <constraint firstItem="VZG-mW-Hzw" firstAttribute="leading" secondItem="zF2-GL-kkk" secondAttribute="leadingMargin" constant="-20" id="6dN-SE-6t7"/>
                             <constraint firstItem="Na7-9v-s11" firstAttribute="centerX" secondItem="xD1-Ws-ENQ" secondAttribute="centerX" id="OaL-Ep-fK2"/>
                             <constraint firstItem="xD1-Ws-ENQ" firstAttribute="trailing" secondItem="zF2-GL-kkk" secondAttribute="trailingMargin" id="VTW-Tm-V8u"/>
@@ -414,7 +414,7 @@
             <objects>
                 <viewController storyboardIdentifier="LocationsViewController" title="Locations" id="VRY-ZG-8Id" customClass="LocationsViewController" customModule="PhoneOrderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fzq-Pl-15M">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="8EY-Kz-SX8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -432,7 +432,7 @@
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" title="Profile" id="TFh-g3-7Sh" customClass="ProfileViewController" customModule="PhoneOrderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hKz-mh-0Sf">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kaG-9S-207">
@@ -790,7 +790,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5bm-E9-U0t" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Phone" image="iphone" catalog="system" id="UaA-1c-VEk">
-                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="badgeColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mxY-zT-bPd">
@@ -814,9 +814,6 @@
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray4Color">
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
