@@ -1,9 +1,15 @@
 //
+//  MAPD724 W2023
+//  Group 9
+//  Assignment 2 - Frameworks App - Part 1
+//  App description: Phone Order App
+//  Author: Po Lam Wong, Lizolet (301258847)
+//          Chi Hung Sum, Samuel (300858503)
+//          Chun Fun Suen, Alan (301277969)
+
 //  StoreDetailViewController.swift
-//  PhoneOrderApp
-//
-//  MAPD724 W23 iOS assignment 2 part 1
-//  Created by Group 9 on 2023-03-21.
+//  Date: MAR 26, 2023
+//  Version: 1.0
 //
 
 import UIKit
