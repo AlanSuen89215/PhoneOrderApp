@@ -13,6 +13,7 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
     @IBOutlet weak var colorTextField: UITextField!
     @IBOutlet weak var phoneImageView: UIImageView!
     @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var phonePriceLabel: UILabel!
     
     let size = ["128GB", "256GB","512GB","1TB"]
     let color = ["Deep Purple","Gold","Silver","Space Black"]
@@ -23,6 +24,7 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
     
     var phoneImage = UIImage()
     var phoneName = ""
+    var phonePrice = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +48,7 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
         
         phoneLabel.text = phoneName
         phoneImageView.image = phoneImage
+        phonePriceLabel.text = "Price: $" + String(phonePrice)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -86,5 +89,17 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
         }
     }
 
+    @IBAction func onBtnContinueTouchUpInside(_ sender: UIButton) {
+        var order = PhoneOrder()
+        order.model = phoneName
+        order.price = phonePrice
+        order.storage = sizeTextField.text!
+        order.color = colorTextField.text!
+        
+        if let toVC = storyboard?.instantiateViewController(identifier:"ConfirmationViewController") as? ConfirmationViewController {
+            toVC.setOrder(order: order)
+            self.navigationController?.pushViewController(toVC, animated: true)
+        }
+    }
 }
 
