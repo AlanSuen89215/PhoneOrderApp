@@ -64,7 +64,7 @@ class ConfirmationViewController: UIViewController {
         dateFormatter.dateFormat = "dd/MM/yyyy hh:mm"
         dateFormatter.locale = Locale(identifier: "ca")
         order.createDate = dateFormatter.string(from: Date())
-        order.status = "ordered"
+        order.status = "Ordered"
         
         saveOrder()
         

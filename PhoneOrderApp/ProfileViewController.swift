@@ -35,14 +35,14 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         dateFormatter.locale = Locale(identifier: "ca")
         var order = PhoneOrder()
         order.createDate = dateFormatter.string(from: Date())
-        order.status = "ordered"
+        order.status = "Ordered"
         order.model = "iPhone 14 Pro Max"
         order.storage = "128GB"
         order.color = "Deep Purple"
         orders.append(order)
         order = PhoneOrder()
         order.createDate = dateFormatter.string(from: Date())
-        order.status = "ordered"
+        order.status = "Ordered"
         order.model = "iPhone 14"
         order.storage = "256GB"
         order.color = "Gold"

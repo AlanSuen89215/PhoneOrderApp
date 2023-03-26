@@ -33,8 +33,8 @@ class OrderDetailViewController: UIViewController {
         modelLabel.text = order.model
         storageLabel.text = order.storage
         colorLabel.text = order.color
-        orderDateLabel.text = order.createDate
-        orderStatusLabel.text = order.status
+        orderDateLabel.text = "Order Date: \n" + order.createDate
+        orderStatusLabel.text = "Order Status: \n" + order.status
         phoneImage.image = UIImage(named: "iPhone 14 Pro Max")
     }
 
