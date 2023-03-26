@@ -14,6 +14,7 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
     @IBOutlet weak var phoneImageView: UIImageView!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var phonePriceLabel: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
     
     let size = ["128GB", "256GB","512GB","1TB"]
     let color = ["Deep Purple","Gold","Silver","Space Black"]
@@ -90,15 +91,20 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
     }
 
     @IBAction func onBtnContinueTouchUpInside(_ sender: UIButton) {
-        var order = PhoneOrder()
+        let order = PhoneOrder()
         order.model = phoneName
         order.price = phonePrice
         order.storage = sizeTextField.text!
         order.color = colorTextField.text!
         
-        if let toVC = storyboard?.instantiateViewController(identifier:"ConfirmationViewController") as? ConfirmationViewController {
-            toVC.setOrder(order: order)
-            self.navigationController?.pushViewController(toVC, animated: true)
+        if sizeTextField.text!.isEmpty || colorTextField.text!.isEmpty {
+            errorLabel.isHidden = false
+            errorLabel.text = "Please select the storage size and color."
+        } else {
+            if let toVC = storyboard?.instantiateViewController(identifier:"ConfirmationViewController") as? ConfirmationViewController {
+                toVC.setOrder(order: order)
+                self.navigationController?.pushViewController(toVC, animated: true)
+            }
         }
     }
 }

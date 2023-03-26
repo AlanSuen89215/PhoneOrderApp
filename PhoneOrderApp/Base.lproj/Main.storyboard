@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3j5-8D-eNh">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3j5-8D-eNh">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -53,18 +54,18 @@
             <objects>
                 <viewController storyboardIdentifier="PhoneViewController" title="Phone" automaticallyAdjustsScrollViewInsets="NO" id="lAR-e4-UZt" customClass="PhoneViewController" customModule="PhoneOrderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zF2-GL-kkk">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xD1-Ws-ENQ">
-                                <rect key="frame" x="16" y="176" width="358" height="571"/>
+                                <rect key="frame" x="20" y="191" width="390" height="644"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="120" id="7py-rl-0Wq" customClass="PhoneTableViewCell" customModule="PhoneOrderApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="358" height="120"/>
+                                        <rect key="frame" x="0.0" y="50" width="390" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7py-rl-0Wq" id="Uhd-NU-cGB">
-                                            <rect key="frame" x="0.0" y="0.0" width="358" height="120"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Zcf-jU-8JK" userLabel="phone_image">
@@ -109,7 +110,7 @@
                                 </connections>
                             </tableView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Na7-9v-s11" userLabel="brand_selector">
-                                <rect key="frame" x="65" y="116" width="260" height="32"/>
+                                <rect key="frame" x="65" y="131" width="300" height="32"/>
                                 <color key="backgroundColor" red="0.92156863209999995" green="0.270588249" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <segments>
                                     <segment title="Apple"/>
@@ -123,7 +124,7 @@
                                 </connections>
                             </segmentedControl>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZG-mW-Hzw">
-                                <rect key="frame" x="-4" y="44" width="398" height="44"/>
+                                <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                             </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mBz-WA-KLa"/>
@@ -156,72 +157,73 @@
             <objects>
                 <viewController storyboardIdentifier="PhoneDetailsViewController" id="6zu-f6-NCC" userLabel="Phone Details" customClass="PhoneDetailsViewController" customModule="PhoneOrderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OE0-aK-v0M">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PxZ-rY-8BH">
-                                <rect key="frame" x="115" y="199" width="200" height="200"/>
+                                <rect key="frame" x="113.55146633500135" y="203" width="200.00000000000023" height="200.00000000000011"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SELECT STORAGE SIZE AND COLOR:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQa-wB-uO6">
-                                <rect key="frame" x="65" y="446" width="274" height="19"/>
+                                <rect key="frame" x="74.870863417204419" y="443" width="280" height="19.999999999999773"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
                                 <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iE3-89-a6d" userLabel="Size Text Field">
-                                <rect key="frame" x="65" y="473" width="300" height="34"/>
+                                <rect key="frame" x="113.55146633500135" y="479" width="200.00000000000023" height="33.999999999999773"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4V3-zb-H1h" userLabel="Color Text Field">
-                                <rect key="frame" x="65" y="522" width="300" height="34"/>
+                                <rect key="frame" x="113.55146633500135" y="529" width="200.00000000000023" height="34.000000000000341"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price: $" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MC-vk-CKa" userLabel="priceLabel">
-                                <rect key="frame" x="95" y="586" width="200" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="CUM-Qh-1pM"/>
-                                    <constraint firstAttribute="width" constant="200" id="z5O-cg-g9w"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iPhone 14 Pro Max" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkc-cC-dIb" userLabel="phoneLabel">
+                                <rect key="frame" x="125.92925926869657" y="154.99999999999989" width="176.00000000000023" height="24.000000000000227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
+                                <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price: $" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MC-vk-CKa" userLabel="priceLabel">
+                                <rect key="frame" x="149.13762101937482" y="604" width="130.00000000000023" height="20.999999999999943"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
                                 <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please select the storage size and color" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="295" translatesAutoresizingMaskIntoConstraints="NO" id="QXP-e1-UGX">
+                                <rect key="frame" x="67" y="641" width="295" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Bk-nh-0My">
-                                <rect key="frame" x="68" y="653" width="295" height="35"/>
+                                <rect key="frame" x="68" y="671" width="295.00000000000023" height="35.000000000000341"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.92156863209999995" green="0.270588249" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="CONTINUE">
-                                    <fontDescription key="titleFontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
+                                    <fontDescription key="titleFontDescription" name="Rubik-Medium" family="Rubik" pointSize="16"/>
                                     <color key="baseBackgroundColor" red="0.92156863209999995" green="0.270588249" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onBtnContinueTouchUpInside:" destination="6zu-f6-NCC" eventType="touchUpInside" id="idH-HS-Rd4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iPhone 14 Pro Max" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tkc-cC-dIb" userLabel="phoneLabel">
-                                <rect key="frame" x="127" y="153" width="176" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="20"/>
-                                <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dlk-9f-pKR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="1MC-vk-CKa" firstAttribute="top" secondItem="Dlk-9f-pKR" secondAttribute="top" constant="542" id="HBs-Zj-710"/>
-                            <constraint firstItem="1MC-vk-CKa" firstAttribute="centerX" secondItem="OE0-aK-v0M" secondAttribute="centerX" id="yaj-u4-38s"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="colorTextField" destination="4V3-zb-H1h" id="vBw-kB-bLl"/>
+                        <outlet property="errorLabel" destination="QXP-e1-UGX" id="Xw8-zI-LbE"/>
                         <outlet property="phoneImageView" destination="PxZ-rY-8BH" id="QDq-Dp-OqH"/>
                         <outlet property="phoneLabel" destination="tkc-cC-dIb" id="KKg-a6-C1f"/>
                         <outlet property="phonePriceLabel" destination="1MC-vk-CKa" id="XD3-s5-yf0"/>
@@ -237,133 +239,134 @@
             <objects>
                 <viewController storyboardIdentifier="ConfirmationViewController" id="Ez1-LX-n11" customClass="ConfirmationViewController" customModule="PhoneOrderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YIq-H2-P6b">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x4e-GQ-fqW">
-                                <rect key="frame" x="-1" y="59" width="390" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Confirmation" id="G0R-Ym-Ya1"/>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOU HAVE SELECTED:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ap4-9F-nH4">
-                                <rect key="frame" x="20" y="139" width="179" height="21"/>
+                                <rect key="frame" x="24" y="120" width="179" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
                                 <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="REGISTER:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJn-eT-qhR">
-                                <rect key="frame" x="20" y="272" width="87" height="21"/>
+                                <rect key="frame" x="20" y="268" width="87" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
                                 <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iPhone 14 PRO MAX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a15-hI-Mnq" userLabel="Model">
-                                <rect key="frame" x="20" y="160" width="159" height="21"/>
+                                <rect key="frame" x="32" y="144" width="159" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
                                 <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="256 GB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iE-N3-xB2" userLabel="Size">
-                                <rect key="frame" x="20" y="202" width="60" height="21"/>
+                                <rect key="frame" x="32" y="192" width="59.333333333333343" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
                                 <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DEEP PURPLE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNU-2O-OPp" userLabel="Color">
-                                <rect key="frame" x="20" y="181" width="115" height="21"/>
+                                <rect key="frame" x="32" y="168" width="115" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
                                 <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aTi-Jl-R33" userLabel="Name">
-                                <rect key="frame" x="75" y="301" width="280" height="34"/>
+                                <rect key="frame" x="74.828564491752331" y="296" width="280.00000000000023" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Credit Card Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wHc-lp-OEb" userLabel="CreditCard">
-                                <rect key="frame" x="75" y="537" width="280" height="34"/>
+                                <rect key="frame" x="74.402955301850398" y="532" width="280" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Holder Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bol-nX-wH0" userLabel="CardHolderName">
-                                <rect key="frame" x="75" y="637" width="280" height="34"/>
+                                <rect key="frame" x="73.891620998223516" y="632" width="279.99999999999977" height="33.999999999999943"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KdC-K0-zTJ" userLabel="PhoneNumebr">
-                                <rect key="frame" x="75" y="351" width="280" height="34"/>
+                                <rect key="frame" x="74.828564491752331" y="346" width="280.00000000000023" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bMR-KC-kn0">
-                                <rect key="frame" x="75" y="401" width="280" height="34"/>
+                                <rect key="frame" x="74.828564491752331" y="396" width="279.99999999999977" height="33.999999999999829"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NJg-Ob-zZq">
-                                <rect key="frame" x="75" y="451" width="130" height="34"/>
+                                <rect key="frame" x="224.63614720655369" y="446" width="130.00000000000091" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Postal Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zjC-PA-XS5" userLabel="PostalCode">
-                                <rect key="frame" x="225" y="451" width="130" height="34"/>
+                                <rect key="frame" x="74.636147206553687" y="446" width="130" height="34.000000000000114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Expiry Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ePV-Oy-MW1" userLabel="ExpiryDate">
-                                <rect key="frame" x="75" y="587" width="130" height="34"/>
+                                <rect key="frame" x="73.891620998223516" y="582" width="129.99999999999977" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV (3-digits)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L7n-on-eJQ" userLabel="CVV">
-                                <rect key="frame" x="225" y="587" width="130" height="34"/>
+                                <rect key="frame" x="223.89162099822261" y="582" width="130" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PAYMENT:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUd-wh-6De">
-                                <rect key="frame" x="20" y="509" width="83" height="21"/>
+                                <rect key="frame" x="20" y="503" width="83" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
                                 <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4k-Pm-F32">
-                                <rect key="frame" x="68" y="740" width="295" height="35"/>
+                                <rect key="frame" x="67.454284268687843" y="735" width="295.00000000000068" height="34.999999999999886"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.92156863209999995" green="0.270588249" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="CONFIRM">
                                     <fontDescription key="titleFontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
+                                    <color key="baseBackgroundColor" red="0.92156863209999995" green="0.270588249" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="onBtnConfirmTouchUpInside:" destination="Ez1-LX-n11" eventType="touchUpInside" id="aqe-fb-aR7"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRZ-A4-utG">
-                                <rect key="frame" x="68" y="711" width="295" height="21"/>
+                                <rect key="frame" x="67.454284268687843" y="706" width="295.00000000000068" height="20.999999999999943"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$1549" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSJ-0W-uUY" userLabel="Price">
-                                <rect key="frame" x="207" y="139" width="100" height="21"/>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x4e-GQ-fqW">
+                                <rect key="frame" x="-2" y="52" width="431" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Confirmation" id="G0R-Ym-Ya1"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$1549" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zSJ-0W-uUY" userLabel="Price">
+                                <rect key="frame" x="310" y="119" width="100" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
                                 <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -373,6 +376,7 @@
                         <viewLayoutGuide key="safeArea" id="x3D-72-FVT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="addressTextField" destination="bMR-KC-kn0" id="jtd-aK-DUf"/>
                         <outlet property="cityTextField" destination="NJg-Ob-zZq" id="dRz-py-zMh"/>
@@ -399,36 +403,36 @@
             <objects>
                 <viewController storyboardIdentifier="OrderCompletionViewController" id="4em-8v-0KT" customClass="OrderCompletionViewController" customModule="PhoneOrderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JPp-Qt-eb5">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EGv-pz-Hds">
-                                <rect key="frame" x="-2" y="59" width="392" height="44"/>
+                                <rect key="frame" x="-2" y="59" width="432" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Thank You!" id="6AJ-XW-B5j"/>
                                 </items>
                             </navigationBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cart" translatesAutoresizingMaskIntoConstraints="NO" id="iH5-7t-Tua">
-                                <rect key="frame" x="64" y="302" width="315" height="202"/>
+                                <rect key="frame" x="56.301012341307796" y="302.00000000000011" width="314.99999999999955" height="202.00000000000006"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOUR ORDER IS CONFIRMED. THANK YOU FOR YOUR PURCHASE!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqr-id-lQV">
-                                <rect key="frame" x="65" y="177" width="312" height="41"/>
+                                <rect key="frame" x="58.875947033120156" y="177" width="312" height="41.000000000000114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
                                 <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PRODUCT WILL BE DELIVERED WITHIN 7-14 DAYS" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N93-Ge-xKI">
-                                <rect key="frame" x="74" y="523" width="282" height="41"/>
+                                <rect key="frame" x="72.600751108557233" y="523" width="282" height="41.000000000000114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
                                 <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ol4-eX-6Qc">
-                                <rect key="frame" x="68" y="689" width="295" height="35"/>
+                                <rect key="frame" x="66.600751108557233" y="689" width="295" height="35.000000000000085"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.92156863209999995" green="0.270588249" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
@@ -453,7 +457,7 @@
             <objects>
                 <viewController storyboardIdentifier="ProfileViewController" title="Profile" id="TFh-g3-7Sh" customClass="ProfileViewController" customModule="PhoneOrderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hKz-mh-0Sf">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kaG-9S-207">
@@ -483,7 +487,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nx6-1g-YZa">
-                                <rect key="frame" x="-1" y="59" width="390" height="44"/>
+                                <rect key="frame" x="-2" y="59" width="430" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Profile" id="N7U-Ui-hoR"/>
@@ -507,7 +511,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="orderCell" rowHeight="120" id="Qwa-Zn-FbX" customClass="OrderTableViewCell" customModule="PhoneOrderApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="350" height="120"/>
+                                        <rect key="frame" x="0.0" y="50" width="350" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qwa-Zn-FbX" id="epI-tp-rBt">
                                             <rect key="frame" x="0.0" y="0.0" width="350" height="120"/>
@@ -603,22 +607,12 @@
             <objects>
                 <viewController storyboardIdentifier="EditProfileViewController" id="dIQ-Hm-Ljl" customClass="EditProfileViewController" customModule="PhoneOrderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bB-Gn-dZP">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0id-dD-8Au">
-                                <rect key="frame" x="0.0" y="59" width="390" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcC-Jt-sVj">
+                                <rect key="frame" x="66.75899184555692" y="571" width="295.00000000000023" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="View Profile" id="4j2-Ny-PLr"/>
-                                </items>
-                            </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcC-Jt-sVj">
-                                <rect key="frame" x="65" y="556" width="295" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="295" id="TIX-BT-ka4"/>
-                                    <constraint firstAttribute="height" constant="35" id="qxC-IA-M3v"/>
-                                </constraints>
                                 <color key="tintColor" red="0.92156863209999995" green="0.270588249" blue="0.37254902719999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="CONFIRM">
@@ -628,141 +622,88 @@
                                     <action selector="onBtnConfirmTouchUpInside:" destination="dIQ-Hm-Ljl" eventType="touchUpInside" id="iX8-kd-qAg"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Harry Potter" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cYM-GI-T7O" userLabel="Name">
-                                <rect key="frame" x="75" y="250" width="280" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="PHv-PT-hhd"/>
-                                    <constraint firstAttribute="height" constant="34" id="rjF-l0-bQw"/>
-                                </constraints>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Harry Potter" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cYM-GI-T7O" userLabel="Name">
+                                <rect key="frame" x="74.74894285733717" y="265" width="279.99999999999955" height="33.999999999999773"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBZ-hm-hfg">
-                                <rect key="frame" x="65" y="231" width="45.666666666666657" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="45.666666666666657" id="ic5-G7-wre"/>
-                                    <constraint firstAttribute="height" constant="21" id="rzJ-gF-Ie7"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBZ-hm-hfg">
+                                <rect key="frame" x="65" y="246" width="45.666666666666657" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="15"/>
                                 <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+1 647 123 1234" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mjT-AY-js5" userLabel="Name">
-                                <rect key="frame" x="75" y="316" width="280" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="97X-CA-fmo"/>
-                                    <constraint firstAttribute="width" constant="280" id="tFd-5G-2I8"/>
-                                </constraints>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="+1 647 123 1234" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mjT-AY-js5" userLabel="Name">
+                                <rect key="frame" x="74.74894285733717" y="331" width="279.99999999999955" height="33.999999999999773"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Zu-OF-gqf">
-                                <rect key="frame" x="65" y="300" width="112" height="18"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="18" id="Lqd-zw-LZJ"/>
-                                    <constraint firstAttribute="width" constant="112" id="akI-GN-op6"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Phone Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Zu-OF-gqf">
+                                <rect key="frame" x="65" y="315" width="112" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="15"/>
                                 <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="941 Progress Aveune" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yPr-5U-f59" userLabel="Name">
-                                <rect key="frame" x="80" y="382" width="280" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="280" id="0l4-UY-3m7"/>
-                                    <constraint firstAttribute="height" constant="34" id="HPb-kb-tNv"/>
-                                </constraints>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="941 Progress Aveune" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yPr-5U-f59" userLabel="Name">
+                                <rect key="frame" x="74.74894285733717" y="397" width="279.99999999999977" height="33.999999999999773"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n68-jR-sNd">
-                                <rect key="frame" x="70" y="366" width="112" height="18"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="112" id="CVe-uw-oKN"/>
-                                    <constraint firstAttribute="height" constant="18" id="fhy-2a-7jf"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n68-jR-sNd">
+                                <rect key="frame" x="65" y="381" width="112" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="15"/>
                                 <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Toronto" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H1z-UK-XhX" userLabel="Name">
-                                <rect key="frame" x="80" y="449" width="112" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="112" id="GKE-dU-f90"/>
-                                    <constraint firstAttribute="height" constant="34" id="dSS-Qz-bzJ"/>
-                                </constraints>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Toronto" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H1z-UK-XhX" userLabel="Name">
+                                <rect key="frame" x="74.412472460929621" y="464" width="111.99999999999955" height="33.999999999999545"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjw-8Y-pF5">
-                                <rect key="frame" x="70" y="433" width="112" height="18"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="18" id="EPi-9g-zLR"/>
-                                    <constraint firstAttribute="width" constant="112" id="gi0-fW-45N"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="City:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gjw-8Y-pF5">
+                                <rect key="frame" x="65" y="448" width="112" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="15"/>
                                 <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="M1G 3T8" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y0e-l5-ArI" userLabel="Name">
-                                <rect key="frame" x="236" y="449" width="112" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="112" id="Lxz-GF-MMb"/>
-                                    <constraint firstAttribute="height" constant="34" id="Yh5-MK-wax"/>
-                                </constraints>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="M1G 3T8" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y0e-l5-ArI" userLabel="Name">
+                                <rect key="frame" x="242.41247246092917" y="464" width="112.00000000000045" height="33.999999999999545"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Postal Code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjQ-eJ-aGG">
-                                <rect key="frame" x="226" y="433" width="112" height="18"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="18" id="6lT-J4-vGl"/>
-                                    <constraint firstAttribute="width" constant="112" id="hbP-Is-Y8t"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Postal Code:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjQ-eJ-aGG">
+                                <rect key="frame" x="232" y="448" width="112" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="15"/>
                                 <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eK-tn-Kcn">
-                                <rect key="frame" x="65" y="527" width="295" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="295" id="Ods-8G-3Kt"/>
-                                    <constraint firstAttribute="height" constant="21" id="jNk-tW-as2"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eK-tn-Kcn">
+                                <rect key="frame" x="66.75899184555692" y="542" width="295.00000000000023" height="21.000000000000227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0id-dD-8Au">
+                                <rect key="frame" x="0.0" y="59" width="430" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="View Profile" id="4j2-Ny-PLr"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fh7-vZ-NLW"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
-                        <constraints>
-                            <constraint firstItem="yPr-5U-f59" firstAttribute="leading" secondItem="Fh7-vZ-NLW" secondAttribute="leading" constant="80" id="5eq-QD-G5H"/>
-                            <constraint firstItem="n68-jR-sNd" firstAttribute="leading" secondItem="Fh7-vZ-NLW" secondAttribute="leading" constant="70" id="Bvt-Ak-KKG"/>
-                            <constraint firstItem="yPr-5U-f59" firstAttribute="leading" secondItem="n68-jR-sNd" secondAttribute="trailing" constant="-102" id="Egi-Ix-EYw"/>
-                            <constraint firstItem="Fh7-vZ-NLW" firstAttribute="trailing" secondItem="y0e-l5-ArI" secondAttribute="trailing" constant="42" id="FYA-42-VYI"/>
-                            <constraint firstItem="mjT-AY-js5" firstAttribute="leading" secondItem="Fh7-vZ-NLW" secondAttribute="leading" constant="75" id="Jym-XS-z3a"/>
-                            <constraint firstItem="CcC-Jt-sVj" firstAttribute="top" secondItem="H1z-UK-XhX" secondAttribute="bottom" constant="73" id="MnP-Ab-8uo"/>
-                            <constraint firstItem="H1z-UK-XhX" firstAttribute="leading" secondItem="Fh7-vZ-NLW" secondAttribute="leading" constant="80" id="PuA-8w-FrF"/>
-                            <constraint firstItem="cYM-GI-T7O" firstAttribute="leading" secondItem="Fh7-vZ-NLW" secondAttribute="leading" constant="75" id="TCd-ON-U1h"/>
-                            <constraint firstItem="Gjw-8Y-pF5" firstAttribute="top" secondItem="yPr-5U-f59" secondAttribute="bottom" constant="17" id="UgE-wd-tTz"/>
-                            <constraint firstItem="yPr-5U-f59" firstAttribute="top" secondItem="n68-jR-sNd" secondAttribute="bottom" constant="-2" id="aDR-I8-hV8"/>
-                            <constraint firstItem="6eK-tn-Kcn" firstAttribute="leading" secondItem="Fh7-vZ-NLW" secondAttribute="leading" constant="65" id="aHZ-OZ-if0"/>
-                            <constraint firstItem="CcC-Jt-sVj" firstAttribute="top" secondItem="6eK-tn-Kcn" secondAttribute="bottom" constant="8" symbolic="YES" id="bkW-Ip-jcP"/>
-                            <constraint firstItem="n68-jR-sNd" firstAttribute="top" secondItem="mjT-AY-js5" secondAttribute="bottom" constant="16" id="cJJ-aN-sIL"/>
-                            <constraint firstItem="H1z-UK-XhX" firstAttribute="top" secondItem="Gjw-8Y-pF5" secondAttribute="bottom" constant="-2" id="cpQ-nb-UxP"/>
-                            <constraint firstItem="Fh7-vZ-NLW" firstAttribute="trailing" secondItem="rjQ-eJ-aGG" secondAttribute="trailing" constant="52" id="dw5-9c-Du8"/>
-                            <constraint firstItem="CcC-Jt-sVj" firstAttribute="leading" secondItem="Fh7-vZ-NLW" secondAttribute="leading" constant="65" id="gGp-he-JUy"/>
-                            <constraint firstItem="iBZ-hm-hfg" firstAttribute="leading" secondItem="Fh7-vZ-NLW" secondAttribute="leading" constant="65" id="grC-NK-1ov"/>
-                            <constraint firstItem="cYM-GI-T7O" firstAttribute="top" secondItem="iBZ-hm-hfg" secondAttribute="bottom" constant="-2" id="iup-bS-hYx"/>
-                            <constraint firstItem="mjT-AY-js5" firstAttribute="top" secondItem="9Zu-OF-gqf" secondAttribute="bottom" constant="-2" id="j54-2u-HLd"/>
-                            <constraint firstItem="y0e-l5-ArI" firstAttribute="top" secondItem="rjQ-eJ-aGG" secondAttribute="bottom" constant="-2" id="qB9-wQ-dMD"/>
-                            <constraint firstItem="Gjw-8Y-pF5" firstAttribute="leading" secondItem="Fh7-vZ-NLW" secondAttribute="leading" constant="70" id="qyf-xu-2P1"/>
-                            <constraint firstItem="9Zu-OF-gqf" firstAttribute="top" secondItem="cYM-GI-T7O" secondAttribute="bottom" constant="16" id="rb2-KF-WKO"/>
-                            <constraint firstItem="rjQ-eJ-aGG" firstAttribute="top" secondItem="yPr-5U-f59" secondAttribute="bottom" constant="17" id="tiy-Kx-KPR"/>
-                            <constraint firstItem="9Zu-OF-gqf" firstAttribute="leading" secondItem="Fh7-vZ-NLW" secondAttribute="leading" constant="65" id="zHc-Q9-s9S"/>
-                            <constraint firstItem="iBZ-hm-hfg" firstAttribute="top" secondItem="Fh7-vZ-NLW" secondAttribute="top" constant="187" id="zdp-X0-pzm"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="addressTextField" destination="yPr-5U-f59" id="tiM-sB-4Es"/>
@@ -775,58 +716,58 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8hR-GP-hRa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1953.8461538461538" y="1107.5829383886255"/>
+            <point key="canvasLocation" x="1953.4883720930231" y="1107.2961373390558"/>
         </scene>
         <!--Order Detail View Controller-->
         <scene sceneID="Khg-iY-zg8">
             <objects>
                 <viewController storyboardIdentifier="OrderDetailViewController" id="wQz-b7-Tzm" customClass="OrderDetailViewController" customModule="PhoneOrderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z9t-jb-QD2">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0IZ-dB-7He">
-                                <rect key="frame" x="0.0" y="59" width="390" height="44"/>
+                                <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                                 <items>
                                     <navigationItem title="Order Details" id="oB4-gb-fLf"/>
                                 </items>
                             </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n3W-f2-a3g">
-                                <rect key="frame" x="0.0" y="103" width="390" height="741"/>
+                                <rect key="frame" x="0.0" y="103" width="430" height="829"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Status:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ao5-hW-Dwc" userLabel="Model">
-                                        <rect key="frame" x="140.33333333333334" y="28" width="109.33333333333334" height="20"/>
+                                        <rect key="frame" x="160.33333333333334" y="28" width="109.33333333333334" height="20"/>
                                         <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
                                         <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rrT-lP-6xr">
-                                        <rect key="frame" x="75" y="56" width="240" height="128"/>
+                                        <rect key="frame" x="95" y="56" width="240" height="128"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="128" id="w7w-bk-F4B"/>
                                             <constraint firstAttribute="width" constant="240" id="ynW-zY-740"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 14 PRO MAX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZW-dS-exW" userLabel="Model">
-                                        <rect key="frame" x="115.66666666666669" y="192" width="159" height="20"/>
+                                        <rect key="frame" x="135.66666666666666" y="192" width="158.99999999999997" height="20"/>
                                         <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
                                         <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="256 GB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ynm-1v-sTk" userLabel="Size">
-                                        <rect key="frame" x="165.33333333333334" y="220" width="59.333333333333343" height="20"/>
+                                        <rect key="frame" x="185.33333333333334" y="220" width="59.333333333333343" height="20"/>
                                         <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
                                         <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Date:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YT-EY-LwK" userLabel="Model">
-                                        <rect key="frame" x="148.66666666666666" y="0.0" width="93" height="20"/>
+                                        <rect key="frame" x="168.66666666666666" y="0.0" width="92.999999999999972" height="20"/>
                                         <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
                                         <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DEEP PURPLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMg-vK-bQZ" userLabel="Color">
-                                        <rect key="frame" x="137.66666666666666" y="248" width="115" height="20"/>
+                                        <rect key="frame" x="157.66666666666666" y="248" width="114.99999999999997" height="20"/>
                                         <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
                                         <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
@@ -884,7 +825,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mxY-zT-bPd">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -905,7 +846,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="tIF-YQ-xm4">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -922,14 +863,14 @@
             <objects>
                 <viewController storyboardIdentifier="LocationsViewController" title="Locations" id="VRY-ZG-8Id" customClass="LocationsViewController" customModule="PhoneOrderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fzq-Pl-15M">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="761"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CtT-ys-5GI">
-                                <rect key="frame" x="0.0" y="145" width="390" height="616"/>
+                                <rect key="frame" x="0.0" y="160" width="430" height="689"/>
                             </mapView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MP7-Gy-QUl">
-                                <rect key="frame" x="40" y="97" width="310" height="32"/>
+                                <rect key="frame" x="40" y="112" width="350" height="32"/>
                                 <color key="backgroundColor" red="0.86396181579999998" green="0.25294351580000002" blue="0.349065721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <segments>
                                     <segment title="Apple"/>
@@ -970,11 +911,11 @@
             <objects>
                 <viewController storyboardIdentifier="StoreDetailViewController" id="ovF-4p-H4y" customClass="StoreDetailViewController" customModule="PhoneOrderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VCX-ID-z21">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ARN-vF-APi">
-                                <rect key="frame" x="21" y="58.999999999999993" width="348" height="31.666666666666664"/>
+                                <rect key="frame" x="21" y="74" width="388" height="31.666666666666671"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="348" id="sEA-8b-hfp"/>
                                 </constraints>
@@ -983,25 +924,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="address" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6g-FT-LKn">
-                                <rect key="frame" x="21" y="91.333333333333329" width="348" height="20.333333333333329"/>
+                                <rect key="frame" x="21" y="106.33333333333333" width="388" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OPENING HOURS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpD-bs-43z">
-                                <rect key="frame" x="21" y="139.33333333333334" width="348" height="21"/>
+                                <rect key="frame" x="21" y="154.33333333333334" width="388" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7BI-U3-KdL">
-                                <rect key="frame" x="21" y="162.33333333333334" width="348" height="20.333333333333343"/>
+                                <rect key="frame" x="21" y="177.33333333333334" width="388" height="20.333333333333343"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABOUT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hx4-AX-gba">
-                                <rect key="frame" x="21" y="214.33333333333334" width="348" height="21"/>
+                                <rect key="frame" x="21" y="229.33333333333334" width="388" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1012,7 +953,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="rating" textAlignment="natural" lineBreakMode="headTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="388" translatesAutoresizingMaskIntoConstraints="NO" id="EAe-XP-7Od" userLabel="Lbl Website">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="website" textAlignment="natural" lineBreakMode="headTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="388" translatesAutoresizingMaskIntoConstraints="NO" id="EAe-XP-7Od" userLabel="Lbl Website">
                                 <rect key="frame" x="21" y="275" width="388" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -1065,7 +1006,7 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="o2U-uH-qIp">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1080,9 +1021,9 @@
     </scenes>
     <resources>
         <image name="cart" width="631" height="367"/>
-        <image name="iphone" catalog="system" width="108" height="128"/>
-        <image name="map" catalog="system" width="128" height="110"/>
-        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="iphone" catalog="system" width="112" height="128"/>
+        <image name="map" catalog="system" width="128" height="112"/>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
