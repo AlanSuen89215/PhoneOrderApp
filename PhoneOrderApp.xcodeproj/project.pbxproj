@@ -20,6 +20,8 @@
 		9194224629C9ACB7000AE4B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9194224429C9ACB7000AE4B1 /* LaunchScreen.storyboard */; };
 		9194224E29C9AE72000AE4B1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9194224D29C9AE72000AE4B1 /* GoogleService-Info.plist */; };
 		91974BD329D04B0F00ED204F /* PhoneOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91974BD229D04B0F00ED204F /* PhoneOrder.swift */; };
+		91DCDF4529D0744A0066A388 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCDF4429D0744A0066A388 /* Customer.swift */; };
+		91DCDF4929D076370066A388 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DCDF4829D076370066A388 /* EditProfileViewController.swift */; };
 		E05F68C6D17F8DF7B84EAF1D /* Pods_PhoneOrderApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3E1F8C070F3EEB474363F6 /* Pods_PhoneOrderApp.framework */; };
 		E3C0D08129CA95E100D9B2BE /* PhoneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C0D08029CA95E100D9B2BE /* PhoneTableViewCell.swift */; };
 		E3C0D09129CA9A1900D9B2BE /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E3C0D08329CA9A1900D9B2BE /* Rubik-MediumItalic.ttf */; };
@@ -58,6 +60,8 @@
 		9194224729C9ACB7000AE4B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9194224D29C9AE72000AE4B1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		91974BD229D04B0F00ED204F /* PhoneOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneOrder.swift; sourceTree = "<group>"; };
+		91DCDF4429D0744A0066A388 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		91DCDF4829D076370066A388 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		AA3E1F8C070F3EEB474363F6 /* Pods_PhoneOrderApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhoneOrderApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C0D08029CA95E100D9B2BE /* PhoneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTableViewCell.swift; sourceTree = "<group>"; };
 		E3C0D08329CA9A1900D9B2BE /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
@@ -123,10 +127,12 @@
 			isa = PBXGroup;
 			children = (
 				91974BD229D04B0F00ED204F /* PhoneOrder.swift */,
+				91DCDF4429D0744A0066A388 /* Customer.swift */,
 				06AFACDF29CA3EB900EE327D /* LocationsViewController.swift */,
 				06AFACE029CA3EB900EE327D /* PhoneViewController.swift */,
 				E3C0D08029CA95E100D9B2BE /* PhoneTableViewCell.swift */,
 				E3C0D0B429CAA1C800D9B2BE /* PhoneDetailsViewController.swift */,
+				91DCDF4829D076370066A388 /* EditProfileViewController.swift */,
 				06AFACDE29CA3EB800EE327D /* ProfileViewController.swift */,
 				06BF50CB29CB6CEB00BC39BD /* StoreDetailViewController.swift */,
 				E3D6172029CC1B4500D9F097 /* OrderTableViewCell.swift */,
@@ -323,12 +329,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9194223E29C9ACB5000AE4B1 /* OrderCompletionViewController.swift in Sources */,
+				91DCDF4529D0744A0066A388 /* Customer.swift in Sources */,
 				06AFACE229CA3EB900EE327D /* LocationsViewController.swift in Sources */,
 				E3C0D08129CA95E100D9B2BE /* PhoneTableViewCell.swift in Sources */,
 				E3C0D0B729CABCEA00D9B2BE /* ConfirmationViewController.swift in Sources */,
 				9194223A29C9ACB5000AE4B1 /* AppDelegate.swift in Sources */,
 				91974BD329D04B0F00ED204F /* PhoneOrder.swift in Sources */,
 				E3C0D0B529CAA1C800D9B2BE /* PhoneDetailsViewController.swift in Sources */,
+				91DCDF4929D076370066A388 /* EditProfileViewController.swift in Sources */,
 				E3D6172129CC1B4500D9F097 /* OrderTableViewCell.swift in Sources */,
 				06AFACE329CA3EB900EE327D /* PhoneViewController.swift in Sources */,
 				91156D5629D06A5B005BE7A4 /* OrderDetailViewController.swift in Sources */,

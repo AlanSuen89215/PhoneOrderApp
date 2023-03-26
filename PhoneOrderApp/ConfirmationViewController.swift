@@ -59,7 +59,7 @@ class ConfirmationViewController: UIViewController {
         order.createDate = dateFormatter.string(from: Date())
         order.status = "ordered"
         
-        saveOrder(order: order)
+        saveOrder()
         
         if let toVC = storyboard?.instantiateViewController(identifier:"OrderCompletionViewController") as? OrderCompletionViewController {
             toVC.setOrder(order: order)
@@ -116,7 +116,7 @@ class ConfirmationViewController: UIViewController {
         return true
     }
     
-    private func saveOrder(order: PhoneOrder) {
+    private func saveOrder() {
         print(order.model)
         print(order.price)
         print(order.storage)

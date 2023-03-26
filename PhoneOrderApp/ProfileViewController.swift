@@ -9,13 +9,20 @@ import UIKit
 
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var customerInfoView: UIView!
     @IBOutlet weak var orderTableView: UITableView!
+    @IBOutlet weak var customerNameLabel: UILabel!
+    @IBOutlet weak var customerAddressLabel: UILabel!
     
     var orders: [PhoneOrder] = []
+    var customer: Customer = Customer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(onCustomerInfoViewTapped(_:)))
+        customerInfoView.addGestureRecognizer(tapGestureRecognizer)
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy hh:mm"
         dateFormatter.locale = Locale(identifier: "ca")
@@ -33,6 +40,15 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         order.storage = "256GB"
         order.color = "Gold"
         orders.append(order)
+        
+        customer.name = "Harry Potter"
+        customer.phoneNum = "4161234567"
+        customer.address = "937 Progress Avenue, Scarborough"
+        customer.city = "Toronto"
+        customer.postalCode = "M1G3T8"
+        
+        customerNameLabel.text = customer.name
+        customerAddressLabel.text = customer.address
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -62,4 +78,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
 
+    @objc private func onCustomerInfoViewTapped(_ sender: UITapGestureRecognizer) {
+        if let toVC = storyboard?.instantiateViewController(identifier:"EditProfileViewController") as? EditProfileViewController {
+            toVC.setCustomer(customer: customer)
+            self.navigationController?.pushViewController(toVC, animated: true)
+        }
+    }
 }
