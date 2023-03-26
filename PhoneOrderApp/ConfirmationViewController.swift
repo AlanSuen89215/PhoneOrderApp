@@ -53,6 +53,11 @@ class ConfirmationViewController: UIViewController {
         order.creditCardExpiryDate = creditCardExpiryDateTextField.text!
         order.creditCardCVV = creditCardCVVTextField.text!
         order.creditCardHolder = creditCardHolderTextField.text!
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy hh:mm"
+        dateFormatter.locale = Locale(identifier: "ca")
+        order.createDate = dateFormatter.string(from: Date())
+        order.status = "ordered"
         
         saveOrder(order: order)
         

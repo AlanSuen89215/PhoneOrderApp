@@ -11,15 +11,28 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     @IBOutlet weak var orderTableView: UITableView!
     
-    let status: [String] = ["Confirmed","Delivered"]
-    let model: [String] = ["iPhone 14 Pro Max","iPhone 14"]
-    let storage: [String] = ["256GB","256GB"]
-    let color: [String] = ["Deep Purple","Gold"]
+    var orders: [PhoneOrder] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy hh:mm"
+        dateFormatter.locale = Locale(identifier: "ca")
+        var order = PhoneOrder()
+        order.createDate = dateFormatter.string(from: Date())
+        order.status = "ordered"
+        order.model = "iPhone 14 Pro Max"
+        order.storage = "128GB"
+        order.color = "Deep Purple"
+        orders.append(order)
+        order = PhoneOrder()
+        order.createDate = dateFormatter.string(from: Date())
+        order.status = "ordered"
+        order.model = "iPhone 14"
+        order.storage = "256GB"
+        order.color = "Gold"
+        orders.append(order)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -27,16 +40,26 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return status.count
+        return orders.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:OrderTableViewCell = tableView.dequeueReusableCell(withIdentifier: "orderCell", for: indexPath) as! OrderTableViewCell
-        cell.statusLabel.text = status[indexPath.row]
-        cell.modelLabel.text = model[indexPath.row]
-        cell.storageLabel.text = storage[indexPath.row]
-        cell.colorLabel.text = color[indexPath.row]
+        let order = orders[indexPath.row]
+        cell.statusLabel.text = order.status
+        cell.modelLabel.text = order.model
+        cell.storageLabel.text = order.storage
+        cell.colorLabel.text = order.color
+        cell.phoneImage.image = UIImage(named: "iPhone 14 Pro Max")
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let order = orders[indexPath.row]
+        if let toVC = storyboard?.instantiateViewController(identifier:"OrderDetailViewController") as? OrderDetailViewController {
+            toVC.setOrder(order: order)
+            self.navigationController?.pushViewController(toVC, animated: true)
+        }
     }
 
 }

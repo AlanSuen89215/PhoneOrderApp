@@ -571,6 +571,7 @@
                                         <connections>
                                             <outlet property="colorLabel" destination="qsh-2B-AiN" id="y1c-VM-htL"/>
                                             <outlet property="modelLabel" destination="Yw1-br-hiv" id="UMD-Ti-svz"/>
+                                            <outlet property="phoneImage" destination="K1L-Bm-Cpk" id="wVG-T7-tWY"/>
                                             <outlet property="statusLabel" destination="dVf-1A-GbI" id="ma5-BO-jOa"/>
                                             <outlet property="storageLabel" destination="RW0-0b-7ef" id="f7I-UZ-47Q"/>
                                         </connections>
@@ -706,10 +707,10 @@
             </objects>
             <point key="canvasLocation" x="1955" y="1108"/>
         </scene>
-        <!--View Controller-->
+        <!--Order Detail View Controller-->
         <scene sceneID="Khg-iY-zg8">
             <objects>
-                <viewController id="wQz-b7-Tzm" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrderDetailViewController" id="wQz-b7-Tzm" customClass="OrderDetailViewController" customModule="PhoneOrderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z9t-jb-QD2">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -723,68 +724,59 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n3W-f2-a3g">
                                 <rect key="frame" x="0.0" y="103" width="390" height="741"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="iPhone 14 PRO MAX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZW-dS-exW" userLabel="Model">
-                                        <rect key="frame" x="136" y="404" width="159" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Status:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ao5-hW-Dwc" userLabel="Model">
+                                        <rect key="frame" x="140" y="29" width="110" height="21"/>
                                         <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
                                         <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="256 GB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ynm-1v-sTk" userLabel="Size">
-                                        <rect key="frame" x="185" y="443" width="60" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
-                                        <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DEEP PURPLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMg-vK-bQZ" userLabel="Color">
-                                        <rect key="frame" x="158" y="424" width="115" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
-                                        <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20/03/2023" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GhX-OO-bK5" userLabel="Model">
-                                        <rect key="frame" x="180" y="81" width="103" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
-                                        <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="14:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6n-Kp-FEx" userLabel="Model">
-                                        <rect key="frame" x="291" y="81" width="46" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
-                                        <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Order Date:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YT-EY-LwK" userLabel="Model">
-                                        <rect key="frame" x="87" y="81" width="93" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
-                                        <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Order Status:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ao5-hW-Dwc" userLabel="Model">
-                                        <rect key="frame" x="104" y="104" width="110" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
-                                        <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rrT-lP-6xr">
-                                        <rect key="frame" x="95" y="172" width="240" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rrT-lP-6xr">
+                                        <rect key="frame" x="75" y="58" width="240" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="128" id="w7w-bk-F4B"/>
+                                            <constraint firstAttribute="width" constant="240" id="ynW-zY-740"/>
+                                        </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Confirmed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VbA-Iv-Y1J" userLabel="Model">
-                                        <rect key="frame" x="231" y="104" width="86" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iPhone 14 PRO MAX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZW-dS-exW" userLabel="Model">
+                                        <rect key="frame" x="115.66666666666669" y="194" width="159" height="21"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
+                                        <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="256 GB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ynm-1v-sTk" userLabel="Size">
+                                        <rect key="frame" x="165" y="223" width="60" height="21"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
+                                        <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order Date:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5YT-EY-LwK" userLabel="Model">
+                                        <rect key="frame" x="148.66666666666666" y="0.0" width="93" height="21"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
+                                        <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DEEP PURPLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMg-vK-bQZ" userLabel="Color">
+                                        <rect key="frame" x="137.66666666666666" y="252" width="115" height="21"/>
                                         <fontDescription key="fontDescription" name="Rubik-Medium" family="Rubik" pointSize="17"/>
                                         <color key="textColor" red="0.29803922770000002" green="0.28627452250000002" blue="0.35686278339999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstItem="ao5-hW-Dwc" firstAttribute="top" secondItem="5YT-EY-LwK" secondAttribute="bottom" constant="8" symbolic="YES" id="7dZ-zf-A8Q"/>
+                                    <constraint firstItem="5YT-EY-LwK" firstAttribute="centerX" secondItem="n3W-f2-a3g" secondAttribute="centerX" id="9LS-1x-Fa3"/>
+                                    <constraint firstItem="ao5-hW-Dwc" firstAttribute="centerX" secondItem="n3W-f2-a3g" secondAttribute="centerX" id="Cm5-e1-TrZ"/>
+                                    <constraint firstItem="rrT-lP-6xr" firstAttribute="centerX" secondItem="n3W-f2-a3g" secondAttribute="centerX" id="Dx6-Jl-ac1"/>
+                                    <constraint firstItem="Ynm-1v-sTk" firstAttribute="centerX" secondItem="n3W-f2-a3g" secondAttribute="centerX" id="TFg-So-62z"/>
+                                    <constraint firstItem="eZW-dS-exW" firstAttribute="top" secondItem="rrT-lP-6xr" secondAttribute="bottom" constant="8" symbolic="YES" id="TNE-UP-sd4"/>
+                                    <constraint firstItem="rrT-lP-6xr" firstAttribute="top" secondItem="ao5-hW-Dwc" secondAttribute="bottom" constant="8" symbolic="YES" id="ZAe-ta-MbG"/>
+                                    <constraint firstItem="MMg-vK-bQZ" firstAttribute="centerX" secondItem="n3W-f2-a3g" secondAttribute="centerX" id="d7z-uY-EXN"/>
+                                    <constraint firstItem="eZW-dS-exW" firstAttribute="centerX" secondItem="n3W-f2-a3g" secondAttribute="centerX" id="gl7-2i-jLj"/>
+                                    <constraint firstItem="rrT-lP-6xr" firstAttribute="centerX" secondItem="n3W-f2-a3g" secondAttribute="centerX" id="ouC-sj-e6Y"/>
+                                    <constraint firstItem="MMg-vK-bQZ" firstAttribute="top" secondItem="Ynm-1v-sTk" secondAttribute="bottom" constant="8" symbolic="YES" id="qLc-xc-9fn"/>
+                                    <constraint firstItem="Ynm-1v-sTk" firstAttribute="top" secondItem="eZW-dS-exW" secondAttribute="bottom" constant="8" symbolic="YES" id="zBq-RD-ecE"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zpg-Xe-M5J"/>
@@ -792,6 +784,7 @@
                         <constraints>
                             <constraint firstItem="n3W-f2-a3g" firstAttribute="top" secondItem="z9t-jb-QD2" secondAttribute="top" constant="103" id="1Kl-DW-1JO"/>
                             <constraint firstItem="n3W-f2-a3g" firstAttribute="top" secondItem="0IZ-dB-7He" secondAttribute="bottom" id="Eyu-9b-xQd"/>
+                            <constraint firstItem="5YT-EY-LwK" firstAttribute="top" secondItem="0IZ-dB-7He" secondAttribute="bottom" symbolic="YES" id="HEa-f0-Mhv"/>
                             <constraint firstItem="n3W-f2-a3g" firstAttribute="centerX" secondItem="z9t-jb-QD2" secondAttribute="centerX" id="T98-sz-PAx"/>
                             <constraint firstItem="n3W-f2-a3g" firstAttribute="leading" secondItem="0IZ-dB-7He" secondAttribute="leading" id="Vka-hc-IDa"/>
                             <constraint firstItem="n3W-f2-a3g" firstAttribute="leading" secondItem="zpg-Xe-M5J" secondAttribute="leading" id="XrU-6a-sjw"/>
@@ -799,6 +792,14 @@
                             <constraint firstItem="n3W-f2-a3g" firstAttribute="trailing" secondItem="0IZ-dB-7He" secondAttribute="trailing" id="qA5-E2-StF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorLabel" destination="MMg-vK-bQZ" id="2GD-Xu-eXD"/>
+                        <outlet property="modelLabel" destination="eZW-dS-exW" id="xJK-YY-5te"/>
+                        <outlet property="orderDateLabel" destination="5YT-EY-LwK" id="ZhK-ZE-mSg"/>
+                        <outlet property="orderStatusLabel" destination="ao5-hW-Dwc" id="bbj-nA-BeR"/>
+                        <outlet property="phoneImage" destination="rrT-lP-6xr" id="sN8-wO-WRH"/>
+                        <outlet property="storageLabel" destination="Ynm-1v-sTk" id="pKj-R7-quY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1SF-zO-0Zy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

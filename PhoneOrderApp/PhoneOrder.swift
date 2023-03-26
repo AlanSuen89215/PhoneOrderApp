@@ -22,4 +22,6 @@ class PhoneOrder {
     public var creditCardExpiryDate = ""
     public var creditCardCVV = ""
     public var creditCardHolder = ""
+    public var status = ""
+    public var createDate = ""
 }

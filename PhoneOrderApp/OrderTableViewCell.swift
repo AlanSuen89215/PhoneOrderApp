@@ -13,6 +13,7 @@ class OrderTableViewCell: UITableViewCell {
     @IBOutlet weak var modelLabel: UILabel!
     @IBOutlet weak var storageLabel: UILabel!
     @IBOutlet weak var colorLabel: UILabel!
+    @IBOutlet weak var phoneImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
