@@ -38,10 +38,15 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
     
     //google phone size list
     let pixel7Pro_size = ["128GB","256GB"]
+    let pixel_size = ["128GB"]
     
     //google color list
     let pixel7Pro_color = ["Hazel","Snow","Obsidian"]
     let pixel7_color = ["Lemongrass","Snow","Obsidian"]
+    let pixel6a_color = ["Sage","Chalk","Charcoal"]
+    let pixel6_color = ["Sorta Seafoam","Kinda Coral","Stormy Black"]
+    let pixel6Pro_color = ["Cloudy White","Sorta Sunny","Stormy Black"]
+    
     
     let google_size = ["128GB", "256GB", "512GB"]
     let color = ["Deep Purple","Gold","Silver","Space Black"]
@@ -97,6 +102,8 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
                 return iPhone12_size.count
             } else if phoneName == "Pixel 7 Pro" || phoneName == "Pixel 7" {
                 return pixel7Pro_size.count
+            } else if phoneName == "Pixel 6a" || phoneName == "Pixel 6" || phoneName == "Pixel 6 Pro"{
+                return pixel_size.count
             } else {
                 return google_size.count
             }
@@ -111,10 +118,16 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
                 return iPhone12_color.count
             } else if phoneName == "iPhone SE" {
                 return iPhoneSE_color.count
-            } else if phoneName == "Pixal 7 Pro" {
+            } else if phoneName == "Pixel 7 Pro" {
                 return pixel7Pro_color.count
-            } else if phoneName == "Pixal 7" {
+            } else if phoneName == "Pixel 7" {
                 return pixel7_color.count
+            } else if phoneName == "Pixel 6a" {
+                return pixel6a_color.count
+            } else if phoneName == "Pixel 6" {
+                return pixel6_color.count
+            } else if phoneName == "Pixel 6 Pro" {
+                return pixel6Pro_color.count
             } else {
                 return color.count
             }
@@ -133,6 +146,8 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
                 return iPhone12_size[row]
             } else if phoneName == "Pixel 7 Pro" || phoneName == "Pixel 7" {
                 return pixel7Pro_size[row]
+            } else if phoneName == "Pixel 6a" || phoneName == "Pixel 6" || phoneName == "Pixel 6 Pro"{
+                return pixel_size[row]
             } else {
                 return google_size[row]
             }
@@ -147,10 +162,16 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
                 return iPhone12_color[row]
             } else if phoneName == "iPhone SE" {
                 return iPhoneSE_color[row]
-            } else if phoneName == "Pixal 7 Pro" {
+            } else if phoneName == "Pixel 7 Pro" {
                 return pixel7Pro_color[row]
-            } else if phoneName == "Pixal 7" {
+            } else if phoneName == "Pixel 7" {
                 return pixel7_color[row]
+            } else if phoneName == "Pixel 6a" {
+                return pixel6a_color[row]
+            } else if phoneName == "Pixel 6" {
+                return pixel6_color[row]
+            } else if phoneName == "Pixel 6 Pro" {
+                return pixel6Pro_color[row]
             } else {
                 return color[row]
             }
@@ -169,6 +190,8 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
                 sizeTextField.text = iPhone12_size[row]
             } else if phoneName == "Pixel 7 Pro" || phoneName == "Pixel 7" {
                 sizeTextField.text = pixel7Pro_size[row]
+            } else if phoneName == "Pixel 6a" || phoneName == "Pixel 6" || phoneName == "Pixel 6 Pro"{
+                sizeTextField.text = pixel_size[row]
             } else {
                 sizeTextField.text = google_size[row]
             }
@@ -186,12 +209,18 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
                 colorTextField.text = iPhone12_color[row]
             } else if phoneName == "iPhone SE" {
                 colorTextField.text = iPhoneSE_color[row]
-            } else if phoneName == "Pixal 7 Pro" {
+            } else if phoneName == "Pixel 7 Pro" {
                 colorTextField.text = pixel7Pro_color[row]
-            } else if phoneName == "Pixal 7" {
+            } else if phoneName == "Pixel 7" {
                 colorTextField.text = pixel7_color[row]
+            } else if phoneName == "Pixel 6a" {
+                colorTextField.text = pixel6a_color[row]
+            } else if phoneName == "Pixel 6" {
+                colorTextField.text = pixel6_color[row]
+            } else if phoneName == "Pixel 6 Pro" {
+                colorTextField.text = pixel6Pro_color[row]
             } else {
-                colorTextField.text = google_size[row]
+                colorTextField.text = color[row]
             }
             
             colorTextField.resignFirstResponder()
