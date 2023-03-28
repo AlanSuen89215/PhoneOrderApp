@@ -47,9 +47,22 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
     let pixel6_color = ["Sorta Seafoam","Kinda Coral","Stormy Black"]
     let pixel6Pro_color = ["Cloudy White","Sorta Sunny","Stormy Black"]
     
+    //samsung phone size list
+    let s23Ultra_size = ["256GB","512GB","1TB"]
+    let s23Plus_size = ["256GB","512GB"]
+    let s23_size = ["128GB","256GB"]
+    
+    //samsung color list
+    let s23Ultra_color = ["Green","Phantomblack","Lavender","Cream","Graphite","Skyblue","Red","Lime"]
+    let s23_color = ["Green","Phantomblack","Lavender","Cream","Graphite","Lime"]
+    let s22Ultra_color = ["Green","Phantomwhite","Skyblue","Red","Graphite","Burgundy"]
+    let s22_color = ["Green","Phantomblack","Graphite","Bora Purple","Violet","Cream","Skyblue","Pinkgold"]
+    let fold4_color = ["Graygreen","Phantomblack","Burgundy","Beige"]
+    let flip4_color = ["Bora Purple","Graphite","Pinkgold","Blue"]
+    let s21_color = ["Graphite","Olive","White","Lavender"]
     
     let google_size = ["128GB", "256GB", "512GB"]
-    let color = ["Deep Purple","Gold","Silver","Space Black"]
+    let color = ["White","Gray"]
     
     //used picker view for drop down menu
     var sizePickerView = UIPickerView()
@@ -96,7 +109,7 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
         case 1:
             if phoneName == "iPhone 14 Pro Max" || phoneName == "iPhone 14 Pro" {
                 return apple_size.count
-            } else if phoneName == "iPhone 14" || phoneName == "iPhone 14 Plus" || phoneName == "iPhone 13" || phoneName == "iPhone 13 Mini" {
+            } else if phoneName == "iPhone 14" || phoneName == "iPhone 14 Plus" || phoneName == "iPhone 13" || phoneName == "iPhone 13 Mini" || phoneName == "Galaxy S22 Ultra" || phoneName == "Galaxy Z Flip4" {
                 return iPhone14_size.count
             } else if phoneName == "iPhone 12" || phoneName == "iPhone SE" {
                 return iPhone12_size.count
@@ -104,6 +117,12 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
                 return pixel7Pro_size.count
             } else if phoneName == "Pixel 6a" || phoneName == "Pixel 6" || phoneName == "Pixel 6 Pro"{
                 return pixel_size.count
+            } else if phoneName == "Galaxy S23 Ultra" || phoneName == "Galaxy Z Fold4" {
+                return s23Ultra_size.count
+            } else if phoneName == "Galaxy S23+" {
+                return s23Plus_size.count
+            } else if phoneName == "Galaxy S23" || phoneName == "Galaxy S22" || phoneName == "Galaxy S21 FE 5G" || phoneName == "Galaxy Z Flip3 5G" {
+                return s23_size.count
             } else {
                 return google_size.count
             }
@@ -128,6 +147,20 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
                 return pixel6_color.count
             } else if phoneName == "Pixel 6 Pro" {
                 return pixel6Pro_color.count
+            } else if phoneName == "Galaxy S23 Ultra" {
+                return s23Ultra_color.count
+            } else if phoneName == "Galaxy S23+" || phoneName == "Galaxy S23" {
+                return s23_color.count
+            } else if phoneName == "Galaxy S22 Ultra" {
+                return s22Ultra_color.count
+            } else if phoneName == "Galaxy S22" {
+                return s22_color.count
+            } else if phoneName == "Galaxy Z Fold4" {
+                return fold4_color.count
+            } else if phoneName == "Galaxy Z Flip4" {
+                return flip4_color.count
+            } else if phoneName == "Galaxy S21 FE 5G" {
+                return s21_color.count
             } else {
                 return color.count
             }
@@ -140,7 +173,7 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
         case 1:
             if phoneName == "iPhone 14 Pro Max" || phoneName == "iPhone 14 Pro" {
                 return apple_size[row]
-            } else if phoneName == "iPhone 14" || phoneName == "iPhone 14 Plus" || phoneName == "iPhone 13" || phoneName == "iPhone 13 Mini" {
+            } else if phoneName == "iPhone 14" || phoneName == "iPhone 14 Plus" || phoneName == "iPhone 13" || phoneName == "iPhone 13 Mini" || phoneName == "Galaxy S22 Ultra" || phoneName == "Galaxy Z Flip4"{
                 return iPhone14_size[row]
             } else if phoneName == "iPhone 12" || phoneName == "iPhone SE" {
                 return iPhone12_size[row]
@@ -148,6 +181,12 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
                 return pixel7Pro_size[row]
             } else if phoneName == "Pixel 6a" || phoneName == "Pixel 6" || phoneName == "Pixel 6 Pro"{
                 return pixel_size[row]
+            } else if phoneName == "Galaxy S23 Ultra" || phoneName == "Galaxy Z Fold4" {
+                return s23Ultra_size[row]
+            } else if phoneName == "Galaxy S23+" {
+                return s23Plus_size[row]
+            } else if phoneName == "Galaxy S23" || phoneName == "Galaxy S22" || phoneName == "Galaxy S21 FE 5G" || phoneName == "Galaxy Z Flip3 5G" {
+                return s23_size[row]
             } else {
                 return google_size[row]
             }
@@ -172,6 +211,20 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
                 return pixel6_color[row]
             } else if phoneName == "Pixel 6 Pro" {
                 return pixel6Pro_color[row]
+            } else if phoneName == "Galaxy S23 Ultra" {
+                return s23Ultra_color[row]
+            } else if phoneName == "Galaxy S23+" || phoneName == "Galaxy S23" {
+                return s23_color[row]
+            } else if phoneName == "Galaxy S22 Ultra" {
+                return s22Ultra_color[row]
+            } else if phoneName == "Galaxy S22" {
+                return s22_color[row]
+            } else if phoneName == "Galaxy Z Fold4" {
+                return fold4_color[row]
+            } else if phoneName == "Galaxy Z Flip4" {
+                return flip4_color[row]
+            } else if phoneName == "Galaxy S21 FE 5G" {
+                return s21_color[row]
             } else {
                 return color[row]
             }
@@ -184,7 +237,7 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
         case 1:
             if phoneName == "iPhone 14 Pro Max" || phoneName == "iPhone 14 Pro" {
                 sizeTextField.text = apple_size[row]
-            } else if phoneName == "iPhone 14" || phoneName == "iPhone 14 Plus" || phoneName == "iPhone 13" || phoneName == "iPhone 13 Mini" {
+            } else if phoneName == "iPhone 14" || phoneName == "iPhone 14 Plus" || phoneName == "iPhone 13" || phoneName == "iPhone 13 Mini" || phoneName == "Galaxy S22 Ultra" || phoneName == "Galaxy Z Flip4"{
                 sizeTextField.text = iPhone14_size[row]
             } else if phoneName == "iPhone 12" || phoneName == "iPhone SE" {
                 sizeTextField.text = iPhone12_size[row]
@@ -192,10 +245,16 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
                 sizeTextField.text = pixel7Pro_size[row]
             } else if phoneName == "Pixel 6a" || phoneName == "Pixel 6" || phoneName == "Pixel 6 Pro"{
                 sizeTextField.text = pixel_size[row]
+            } else if phoneName == "Galaxy S23 Ultra" || phoneName == "Galaxy Z Fold4" {
+                sizeTextField.text = s23Ultra_size[row]
+            } else if phoneName == "Galaxy S23+" {
+                sizeTextField.text = s23Plus_size[row]
+            } else if phoneName == "Galaxy S23" || phoneName == "Galaxy S22" || phoneName == "Galaxy S21 FE 5G" || phoneName == "Galaxy Z Flip3 5G" {
+                sizeTextField.text = s23_size[row]
             } else {
                 sizeTextField.text = google_size[row]
             }
-
+            
             sizeTextField.resignFirstResponder()
             
         case 2:
@@ -219,6 +278,20 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
                 colorTextField.text = pixel6_color[row]
             } else if phoneName == "Pixel 6 Pro" {
                 colorTextField.text = pixel6Pro_color[row]
+            } else if phoneName == "Galaxy S23 Ultra" {
+                colorTextField.text = s23Ultra_color[row]
+            } else if phoneName == "Galaxy S23+" || phoneName == "Galaxy S23" {
+                colorTextField.text = s23_color[row]
+            } else if phoneName == "Galaxy S22 Ultra" {
+                colorTextField.text = s22Ultra_color[row]
+            } else if phoneName == "Galaxy S22" {
+                colorTextField.text = s22_color[row]
+            } else if phoneName == "Galaxy Z Fold4" {
+                colorTextField.text = fold4_color[row]
+            } else if phoneName == "Galaxy Z Flip4" {
+                colorTextField.text = flip4_color[row]
+            } else if phoneName == "Galaxy S21 FE 5G" {
+                colorTextField.text = s21_color[row]
             } else {
                 colorTextField.text = color[row]
             }
