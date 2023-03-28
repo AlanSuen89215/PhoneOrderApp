@@ -22,6 +22,7 @@ class PhoneViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     let cellReuseIdentifier = "cell"
     var currentTableView: Int!
+    var brandText: String!
     
     @IBOutlet weak var brandSegmentedControl: UISegmentedControl!
     @IBOutlet weak var phoneTableView: UITableView!
@@ -32,6 +33,7 @@ class PhoneViewController: UIViewController, UITableViewDelegate, UITableViewDat
         phoneTableView.dataSource = self
         phoneTableView.delegate = self
         currentTableView = 0
+        brandText = "Apple"
         
         brandSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: UIControl.State.selected)
         brandSegmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.normal)
@@ -53,17 +55,19 @@ class PhoneViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
+    @IBAction func brandSwitch(_ sender: UISegmentedControl) {
+        currentTableView = sender.selectedSegmentIndex
+        phoneTableView.reloadData()
+        brandText = sender.titleForSegment(at: sender.selectedSegmentIndex)
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let phoneDetails = storyboard?.instantiateViewController(identifier:"PhoneDetailsViewController") as? PhoneDetailsViewController {
             phoneDetails.phoneImage = UIImage(named: phone_image[currentTableView][indexPath.row])!
             phoneDetails.phoneName = phone_model[currentTableView][indexPath.row]
             phoneDetails.phonePrice = phone_price[currentTableView][indexPath.row]
+            phoneDetails.brandText = brandText
             self.navigationController?.pushViewController(phoneDetails, animated: true)
         }
-    }
-    
-    @IBAction func brandSwitch(_ sender: UISegmentedControl) {
-        currentTableView = sender.selectedSegmentIndex
-        phoneTableView.reloadData()
     }
 }

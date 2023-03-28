@@ -24,6 +24,9 @@
         <array key="Rubik-Medium.ttf">
             <string>Rubik-Medium</string>
         </array>
+        <array key="Rubik-Regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Tab Bar Controller-->
@@ -217,11 +220,19 @@
                                     <action selector="onBtnContinueTouchUpInside:" destination="6zu-f6-NCC" eventType="touchUpInside" id="idH-HS-Rd4"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Brand: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQQ-tF-QTb">
+                                <rect key="frame" x="144" y="122" width="142" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="20"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dlk-9f-pKR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="brandLabel" destination="nQQ-tF-QTb" id="dyB-r1-5sF"/>
                         <outlet property="colorTextField" destination="4V3-zb-H1h" id="vBw-kB-bLl"/>
                         <outlet property="errorLabel" destination="QXP-e1-UGX" id="Xw8-zI-LbE"/>
                         <outlet property="phoneImageView" destination="PxZ-rY-8BH" id="QDq-Dp-OqH"/>
