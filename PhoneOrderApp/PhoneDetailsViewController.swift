@@ -113,9 +113,9 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
                 return iPhone14_size.count
             } else if phoneName == "iPhone 12" || phoneName == "iPhone SE" {
                 return iPhone12_size.count
-            } else if phoneName == "Pixel 7 Pro" || phoneName == "Pixel 7" {
+            } else if phoneName == "Pixel 7 Pro" || phoneName == "Pixel 7" || phoneName == "Pixel 6" || phoneName == "Pixel 6 Pro" {
                 return pixel7Pro_size.count
-            } else if phoneName == "Pixel 6a" || phoneName == "Pixel 6" || phoneName == "Pixel 6 Pro"{
+            } else if phoneName == "Pixel 6a" {
                 return pixel_size.count
             } else if phoneName == "Galaxy S23 Ultra" || phoneName == "Galaxy Z Fold4" {
                 return s23Ultra_size.count
@@ -177,9 +177,9 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
                 return iPhone14_size[row]
             } else if phoneName == "iPhone 12" || phoneName == "iPhone SE" {
                 return iPhone12_size[row]
-            } else if phoneName == "Pixel 7 Pro" || phoneName == "Pixel 7" {
+            } else if phoneName == "Pixel 7 Pro" || phoneName == "Pixel 7" || phoneName == "Pixel 6" || phoneName == "Pixel 6 Pro" {
                 return pixel7Pro_size[row]
-            } else if phoneName == "Pixel 6a" || phoneName == "Pixel 6" || phoneName == "Pixel 6 Pro"{
+            } else if phoneName == "Pixel 6a" {
                 return pixel_size[row]
             } else if phoneName == "Galaxy S23 Ultra" || phoneName == "Galaxy Z Fold4" {
                 return s23Ultra_size[row]
@@ -320,16 +320,47 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
                     phonePriceLabel.text = "Price: $579.0"
                 }
                 
+            } else if phoneName == "Pixel 7 Pro" {
+                sizeTextField.text = pixel7Pro_size[row]
+                if sizeTextField.text == "128GB" {
+                    phonePriceLabel.text = "Price: $1179.0"
+                } else {
+                    phonePriceLabel.text = "Price: $1309.0"
+                }
+                
+            } else if phoneName == "Pixel 7" {
+                sizeTextField.text = pixel7Pro_size[row]
+                if sizeTextField.text == "128GB" {
+                    phonePriceLabel.text = "Price: $799.0"
+                } else {
+                    phonePriceLabel.text = "Price: $929.0"
+                }
+                
+            } else if phoneName == "Pixel 6a" {
+                sizeTextField.text = pixel_size[row]
+                
+            } else if phoneName == "Pixel 6" {
+                sizeTextField.text = pixel7Pro_size[row]
+                if sizeTextField.text == "128GB" {
+                    phonePriceLabel.text = "Price: $799.0"
+                } else {
+                    phonePriceLabel.text = "Price: $929.0"
+                }
+            
+            } else if phoneName == "Pixel 6 Pro" {
+                sizeTextField.text = pixel7Pro_size[row]
+                if sizeTextField.text == "128GB" {
+                    phonePriceLabel.text = "Price: $1179.0"
+                } else {
+                    phonePriceLabel.text = "Price: $1309.0"
+                }
+            
+                
             } else if phoneName == "Galaxy S22 Ultra" {
                 sizeTextField.text = iPhone14_size[row]
             } else if phoneName == "Galaxy Z Flip4" {
                 sizeTextField.text = iPhone14_size[row]
-            } else if phoneName == "iPhone 12" || phoneName == "iPhone SE" {
-                sizeTextField.text = iPhone12_size[row]
-            } else if phoneName == "Pixel 7 Pro" || phoneName == "Pixel 7" {
-                sizeTextField.text = pixel7Pro_size[row]
-            } else if phoneName == "Pixel 6a" || phoneName == "Pixel 6" || phoneName == "Pixel 6 Pro"{
-                sizeTextField.text = pixel_size[row]
+        
             } else if phoneName == "Galaxy S23 Ultra" || phoneName == "Galaxy Z Fold4" {
                 sizeTextField.text = s23Ultra_size[row]
             } else if phoneName == "Galaxy S23+" {
@@ -460,14 +491,54 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
                 
             } else if phoneName == "Pixel 7 Pro" {
                 colorTextField.text = pixel7Pro_color[row]
+                if  colorTextField.text == "Hazel" {
+                    phoneImageView.image = UIImage(named: "pixel7pro_hazel")
+                } else if colorTextField.text == "Snow" {
+                    phoneImageView.image = UIImage(named: "pixel7pro_snow")
+                } else {
+                    phoneImageView.image = UIImage(named: "pixel7pro_obsidian")
+                }
+                
             } else if phoneName == "Pixel 7" {
                 colorTextField.text = pixel7_color[row]
+                if  colorTextField.text == "Lemongrass" {
+                    phoneImageView.image = UIImage(named: "pixel7_lemongrass")
+                } else if colorTextField.text == "Snow" {
+                    phoneImageView.image = UIImage(named: "pixel7_snow")
+                } else {
+                    phoneImageView.image = UIImage(named: "pixel7_obsidian")
+                }
+                
             } else if phoneName == "Pixel 6a" {
                 colorTextField.text = pixel6a_color[row]
+                if  colorTextField.text == "Charcoal" {
+                    phoneImageView.image = UIImage(named: "pixel6a_charcoal")
+                } else if colorTextField.text == "Chalk" {
+                    phoneImageView.image = UIImage(named: "pixel6a_chalk")
+                } else {
+                    phoneImageView.image = UIImage(named: "pixel6a_sage")
+                }
+                
             } else if phoneName == "Pixel 6" {
                 colorTextField.text = pixel6_color[row]
+                if  colorTextField.text == "Stormy Black" {
+                    phoneImageView.image = UIImage(named: "pixel6_stormyBlack")
+                } else if colorTextField.text == "Kinda Coral" {
+                    phoneImageView.image = UIImage(named: "pixel6_kindaCoral")
+                } else {
+                    phoneImageView.image = UIImage(named: "pixel6_sortaSeafoam")
+                }
+                
             } else if phoneName == "Pixel 6 Pro" {
                 colorTextField.text = pixel6Pro_color[row]
+                if  colorTextField.text == "Stormy Black" {
+                    phoneImageView.image = UIImage(named: "pixel6pro_stormyBlack")
+                } else if colorTextField.text == "Cloudy White" {
+                    phoneImageView.image = UIImage(named: "pixel6pro_cloudyWhite")
+                } else {
+                    phoneImageView.image = UIImage(named: "pixel6pro_sortaSunny")
+                }
+                
             } else if phoneName == "Galaxy S23 Ultra" {
                 colorTextField.text = s23Ultra_color[row]
             } else if phoneName == "Galaxy S23+" || phoneName == "Galaxy S23" {
