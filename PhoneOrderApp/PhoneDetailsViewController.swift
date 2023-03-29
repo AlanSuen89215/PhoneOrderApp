@@ -235,9 +235,94 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch pickerView.tag {
         case 1:
-            if phoneName == "iPhone 14 Pro Max" || phoneName == "iPhone 14 Pro" {
+            if phoneName == "iPhone 14 Pro Max" {
                 sizeTextField.text = apple_size[row]
-            } else if phoneName == "iPhone 14" || phoneName == "iPhone 14 Plus" || phoneName == "iPhone 13" || phoneName == "iPhone 13 Mini" || phoneName == "Galaxy S22 Ultra" || phoneName == "Galaxy Z Flip4"{
+                //change product price due to different storage size
+                if sizeTextField.text == "128GB" {
+                    phonePriceLabel.text = "Price: $1549.0"
+                } else if sizeTextField.text == "256GB" {
+                    phonePriceLabel.text = "Price: $1699.0"
+                } else if sizeTextField.text == "512GB" {
+                    phonePriceLabel.text = "Price: $1969.0"
+                } else {
+                    phonePriceLabel.text = "Price: $2239.0"
+                }
+                
+            } else if phoneName == "iPhone 14 Pro" {
+                sizeTextField.text = apple_size[row]
+                if sizeTextField.text == "128GB" {
+                    phonePriceLabel.text = "Price: $1399.0"
+                } else if sizeTextField.text == "256GB" {
+                    phonePriceLabel.text = "Price: $1549.0"
+                } else if sizeTextField.text == "512GB" {
+                    phonePriceLabel.text = "Price: $1819.0"
+                } else {
+                    phonePriceLabel.text = "Price: $2089.0"
+                }
+                
+            } else if phoneName == "iPhone 14" {
+                sizeTextField.text = iPhone14_size[row]
+                if sizeTextField.text == "128GB" {
+                    phonePriceLabel.text = "Price: $1099.0"
+                } else if sizeTextField.text == "256GB" {
+                    phonePriceLabel.text = "Price: $1249.0"
+                } else {
+                    phonePriceLabel.text = "Price: $1519.0"
+                }
+                
+            } else if phoneName == "iPhone 14 Plus" {
+                sizeTextField.text = iPhone14_size[row]
+                if sizeTextField.text == "128GB" {
+                    phonePriceLabel.text = "Price: $1249.0"
+                } else if sizeTextField.text == "256GB" {
+                    phonePriceLabel.text = "Price: $1399.0"
+                } else {
+                    phonePriceLabel.text = "Price: $1669.0"
+                }
+                
+            } else if phoneName == "iPhone 13" {
+                sizeTextField.text = iPhone14_size[row]
+                if sizeTextField.text == "128GB" {
+                    phonePriceLabel.text = "Price: $999.0"
+                } else if sizeTextField.text == "256GB" {
+                    phonePriceLabel.text = "Price: $1149.0"
+                } else {
+                    phonePriceLabel.text = "Price: $1419.0"
+                }
+                
+            } else if phoneName == "iPhone 13 Mini" {
+                sizeTextField.text = iPhone14_size[row]
+                if sizeTextField.text == "128GB" {
+                    phonePriceLabel.text = "Price: $849.0"
+                } else if sizeTextField.text == "256GB" {
+                    phonePriceLabel.text = "Price: $999.0"
+                } else {
+                    phonePriceLabel.text = "Price: $1269.0"
+                }
+            
+            } else if phoneName == "iPhone 12" {
+                sizeTextField.text = iPhone12_size[row]
+                if sizeTextField.text == "128GB" {
+                    phonePriceLabel.text = "Price: $919.0"
+                } else if sizeTextField.text == "256GB" {
+                    phonePriceLabel.text = "Price: $1069.0"
+                } else {
+                    phonePriceLabel.text = "Price: $849.0"
+                }
+                
+            } else if phoneName == "iPhone SE"  {
+                sizeTextField.text = iPhone12_size[row]
+                if sizeTextField.text == "128GB" {
+                    phonePriceLabel.text = "Price: $649.0"
+                } else if sizeTextField.text == "256GB" {
+                    phonePriceLabel.text = "Price: $789.0"
+                } else {
+                    phonePriceLabel.text = "Price: $579.0"
+                }
+                
+            } else if phoneName == "Galaxy S22 Ultra" {
+                sizeTextField.text = iPhone14_size[row]
+            } else if phoneName == "Galaxy Z Flip4" {
                 sizeTextField.text = iPhone14_size[row]
             } else if phoneName == "iPhone 12" || phoneName == "iPhone SE" {
                 sizeTextField.text = iPhone12_size[row]
@@ -258,16 +343,121 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
             sizeTextField.resignFirstResponder()
             
         case 2:
-            if phoneName == "iPhone 14 Pro Max" || phoneName == "iPhone 14 Pro" {
+            if phoneName == "iPhone 14 Pro Max" {
                 colorTextField.text = iPhone14Pro_color[row]
-            } else if phoneName == "iPhone 14" || phoneName == "iPhone 14 Plus" {
+                //Change product image when user choosing different color
+                if colorTextField.text == "Deep Purple" {
+                    phoneImageView.image = UIImage(named: "iPhone14ProMax_DeepPurple")
+                } else if colorTextField.text == "Space Black" {
+                    phoneImageView.image = UIImage(named: "iPhone14ProMax_SpaceBlack")
+                } else if colorTextField.text == "Gold" {
+                    phoneImageView.image = UIImage(named: "iPhone14ProMax_Gold")
+                } else {
+                    phoneImageView.image = UIImage(named: "iPhone14ProMax_Silver")
+                }
+                
+            } else if phoneName == "iPhone 14 Pro" {
+                colorTextField.text = iPhone14Pro_color[row]
+                if colorTextField.text == "Deep Purple" {
+                    phoneImageView.image = UIImage(named: "iPhone14Pro_DeepPurple")
+                } else if colorTextField.text == "Space Black" {
+                    phoneImageView.image = UIImage(named: "iPhone14Pro_SpaceBlack")
+                } else if colorTextField.text == "Gold" {
+                    phoneImageView.image = UIImage(named: "iPhone14Pro_Gold")
+                } else {
+                    phoneImageView.image = UIImage(named: "iPhone14Pro_Silver")
+                }
+                
+            } else if phoneName == "iPhone 14" {
                 colorTextField.text = iPhone14_color[row]
-            } else if phoneName == "iPhone 13" || phoneName == "iPhone 13 Mini" {
+                if colorTextField.text == "Purple" {
+                    phoneImageView.image = UIImage(named: "iPhone14_Purple")
+                } else if colorTextField.text == "Blue" {
+                    phoneImageView.image = UIImage(named: "iPhone14_Blue")
+                } else if colorTextField.text == "Yellow" {
+                    phoneImageView.image = UIImage(named: "iPhone14_Yellow")
+                } else if colorTextField.text == "Starlight" {
+                    phoneImageView.image = UIImage(named: "iPhone14_Starlight")
+                } else if colorTextField.text == "Midnight" {
+                    phoneImageView.image = UIImage(named: "iPhone14_Midnight")
+                } else {
+                    phoneImageView.image = UIImage(named: "iPhone14_Red")
+                }
+                
+            } else if phoneName == "iPhone 14 Plus" {
+                colorTextField.text = iPhone14_color[row]
+                if colorTextField.text == "Purple" {
+                    phoneImageView.image = UIImage(named: "iPhone14Plus_Purple")
+                } else if colorTextField.text == "Blue" {
+                    phoneImageView.image = UIImage(named: "iPhone14Plus_Blue")
+                } else if colorTextField.text == "Yellow" {
+                    phoneImageView.image = UIImage(named: "iPhone14Plus_Yellow")
+                } else if colorTextField.text == "Starlight" {
+                    phoneImageView.image = UIImage(named: "iPhone14Plus_Starlight")
+                } else if colorTextField.text == "Midnight" {
+                    phoneImageView.image = UIImage(named: "iPhone14Plus_Midnight")
+                } else {
+                    phoneImageView.image = UIImage(named: "iPhone14Plus_Red")
+                }
+                
+            } else if phoneName == "iPhone 13" {
                 colorTextField.text = iPhone13_color[row]
+                if colorTextField.text == "Pink" {
+                    phoneImageView.image = UIImage(named: "iphone13_pink")
+                } else if colorTextField.text == "Blue" {
+                    phoneImageView.image = UIImage(named: "iphone13_blue")
+                } else if colorTextField.text == "Green" {
+                    phoneImageView.image = UIImage(named: "iphone13_green")
+                } else if colorTextField.text == "Starlight" {
+                    phoneImageView.image = UIImage(named: "iphone13_starlight")
+                } else if colorTextField.text == "Midnight" {
+                    phoneImageView.image = UIImage(named: "iphone13_midnight")
+                } else {
+                    phoneImageView.image = UIImage(named: "iphone13_red")
+                }
+                
+            } else if phoneName == "iPhone 13 Mini" {
+                colorTextField.text = iPhone13_color[row]
+                if colorTextField.text == "Pink" {
+                    phoneImageView.image = UIImage(named: "iphone13mini_pink")
+                } else if colorTextField.text == "Blue" {
+                    phoneImageView.image = UIImage(named: "iphone13mini_blue")
+                } else if colorTextField.text == "Green" {
+                    phoneImageView.image = UIImage(named: "iphone13mini_green")
+                } else if colorTextField.text == "Starlight" {
+                    phoneImageView.image = UIImage(named: "iphone13mini_starlight")
+                } else if colorTextField.text == "Midnight" {
+                    phoneImageView.image = UIImage(named: "iphone13mini_midnight")
+                } else {
+                    phoneImageView.image = UIImage(named: "iphone13mini_red")
+                }
+                
             } else if phoneName == "iPhone 12" {
                 colorTextField.text = iPhone12_color[row]
+                if colorTextField.text == "Purple" {
+                    phoneImageView.image = UIImage(named: "iphone12_purple")
+                } else if colorTextField.text == "Blue" {
+                    phoneImageView.image = UIImage(named: "iphone12_blue")
+                } else if colorTextField.text == "Green" {
+                    phoneImageView.image = UIImage(named: "iphone12_green")
+                } else if colorTextField.text == "White" {
+                    phoneImageView.image = UIImage(named: "iphone12_white")
+                } else if colorTextField.text == "Black" {
+                    phoneImageView.image = UIImage(named: "iphone12_black")
+                } else {
+                    phoneImageView.image = UIImage(named: "iphone12_red")
+                }
+                
             } else if phoneName == "iPhone SE" {
                 colorTextField.text = iPhoneSE_color[row]
+                if  colorTextField.text == "Starlight" {
+                    phoneImageView.image = UIImage(named: "iphoneSE_starlight")
+                } else if colorTextField.text == "Midnight" {
+                    phoneImageView.image = UIImage(named: "iphoneSE_midnight")
+                } else {
+                    phoneImageView.image = UIImage(named: "iphoneSE_red")
+                }
+                
             } else if phoneName == "Pixel 7 Pro" {
                 colorTextField.text = pixel7Pro_color[row]
             } else if phoneName == "Pixel 7" {
