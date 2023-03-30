@@ -268,77 +268,77 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
             } else if phoneName == "iPhone 14" {
                 sizeTextField.text = iPhone14_size[row]
                 if sizeTextField.text == "128GB" {
-                    phonePriceLabel.text = "Price: $1099.0"
+                    phonePriceLabel.text = "1099.0"
                 } else if sizeTextField.text == "256GB" {
-                    phonePriceLabel.text = "Price: $1249.0"
+                    phonePriceLabel.text = "1249.0"
                 } else {
-                    phonePriceLabel.text = "Price: $1519.0"
+                    phonePriceLabel.text = "1519.0"
                 }
                 
             } else if phoneName == "iPhone 14 Plus" {
                 sizeTextField.text = iPhone14_size[row]
                 if sizeTextField.text == "128GB" {
-                    phonePriceLabel.text = "Price: $1249.0"
+                    phonePriceLabel.text = "1249.0"
                 } else if sizeTextField.text == "256GB" {
-                    phonePriceLabel.text = "Price: $1399.0"
+                    phonePriceLabel.text = "1399.0"
                 } else {
-                    phonePriceLabel.text = "Price: $1669.0"
+                    phonePriceLabel.text = "1669.0"
                 }
                 
             } else if phoneName == "iPhone 13" {
                 sizeTextField.text = iPhone14_size[row]
                 if sizeTextField.text == "128GB" {
-                    phonePriceLabel.text = "Price: $999.0"
+                    phonePriceLabel.text = "999.0"
                 } else if sizeTextField.text == "256GB" {
-                    phonePriceLabel.text = "Price: $1149.0"
+                    phonePriceLabel.text = "1149.0"
                 } else {
-                    phonePriceLabel.text = "Price: $1419.0"
+                    phonePriceLabel.text = "1419.0"
                 }
                 
             } else if phoneName == "iPhone 13 Mini" {
                 sizeTextField.text = iPhone14_size[row]
                 if sizeTextField.text == "128GB" {
-                    phonePriceLabel.text = "Price: $849.0"
+                    phonePriceLabel.text = "$849.0"
                 } else if sizeTextField.text == "256GB" {
-                    phonePriceLabel.text = "Price: $999.0"
+                    phonePriceLabel.text = "999.0"
                 } else {
-                    phonePriceLabel.text = "Price: $1269.0"
+                    phonePriceLabel.text = "1269.0"
                 }
             
             } else if phoneName == "iPhone 12" {
                 sizeTextField.text = iPhone12_size[row]
                 if sizeTextField.text == "128GB" {
-                    phonePriceLabel.text = "Price: $919.0"
+                    phonePriceLabel.text = "919.0"
                 } else if sizeTextField.text == "256GB" {
-                    phonePriceLabel.text = "Price: $1069.0"
+                    phonePriceLabel.text = "1069.0"
                 } else {
-                    phonePriceLabel.text = "Price: $849.0"
+                    phonePriceLabel.text = "849.0"
                 }
                 
             } else if phoneName == "iPhone SE"  {
                 sizeTextField.text = iPhone12_size[row]
                 if sizeTextField.text == "128GB" {
-                    phonePriceLabel.text = "Price: $649.0"
+                    phonePriceLabel.text = "649.0"
                 } else if sizeTextField.text == "256GB" {
-                    phonePriceLabel.text = "Price: $789.0"
+                    phonePriceLabel.text = "789.0"
                 } else {
-                    phonePriceLabel.text = "Price: $579.0"
+                    phonePriceLabel.text = "579.0"
                 }
                 
             } else if phoneName == "Pixel 7 Pro" {
                 sizeTextField.text = pixel7Pro_size[row]
                 if sizeTextField.text == "128GB" {
-                    phonePriceLabel.text = "Price: $1179.0"
+                    phonePriceLabel.text = "1179.0"
                 } else {
-                    phonePriceLabel.text = "Price: $1309.0"
+                    phonePriceLabel.text = "1309.0"
                 }
                 
             } else if phoneName == "Pixel 7" {
                 sizeTextField.text = pixel7Pro_size[row]
                 if sizeTextField.text == "128GB" {
-                    phonePriceLabel.text = "Price: $799.0"
+                    phonePriceLabel.text = "799.0"
                 } else {
-                    phonePriceLabel.text = "Price: $929.0"
+                    phonePriceLabel.text = "929.0"
                 }
                 
             } else if phoneName == "Pixel 6a" {
@@ -347,106 +347,106 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
             } else if phoneName == "Pixel 6" {
                 sizeTextField.text = pixel7Pro_size[row]
                 if sizeTextField.text == "128GB" {
-                    phonePriceLabel.text = "Price: $799.0"
+                    phonePriceLabel.text = "799.0"
                 } else {
-                    phonePriceLabel.text = "Price: $929.0"
+                    phonePriceLabel.text = "929.0"
                 }
             
             } else if phoneName == "Pixel 6 Pro" {
                 sizeTextField.text = pixel7Pro_size[row]
                 if sizeTextField.text == "128GB" {
-                    phonePriceLabel.text = "Price: $1179.0"
+                    phonePriceLabel.text = "1179.0"
                 } else {
-                    phonePriceLabel.text = "Price: $1309.0"
+                    phonePriceLabel.text = "1309.0"
                 }
             
             } else if phoneName == "Galaxy S23 Ultra" {
                 sizeTextField.text = s23Ultra_size[row]
                 if sizeTextField.text == "256GB" {
-                    phonePriceLabel.text = "Price: $1649.99"
+                    phonePriceLabel.text = "1649.99"
                 } else if sizeTextField.text == "512GB" {
-                    phonePriceLabel.text = "Price: $1889.99"
+                    phonePriceLabel.text = "1889.99"
                 } else {
-                    phonePriceLabel.text = "Price: $2029.99"
+                    phonePriceLabel.text = "2029.99"
                 }
                 
             } else if phoneName == "Galaxy S23" {
                 sizeTextField.text = s23_size[row]
                 if sizeTextField.text == "128GB" {
-                    phonePriceLabel.text = "Price: $1099.99"
+                    phonePriceLabel.text = "1099.99"
                 } else {
-                    phonePriceLabel.text = "Price: $1179.99"
+                    phonePriceLabel.text = "1179.99"
                 }
                 
             } else if phoneName == "Galaxy S23+" {
                 sizeTextField.text = s23Plus_size[row]
                 if sizeTextField.text == "256GB" {
-                    phonePriceLabel.text = "Price: $1399.99"
+                    phonePriceLabel.text = "1399.99"
                 } else {
-                    phonePriceLabel.text = "Price: $1559.99"
+                    phonePriceLabel.text = "1559.99"
                 }
                 
             } else if phoneName == "Galaxy S22 Ultra" {
                 sizeTextField.text = s23Ultra_size[row]
                 if sizeTextField.text == "256GB" {
-                    phonePriceLabel.text = "Price: $1789.99.0"
+                    phonePriceLabel.text = "1789.99.0"
                 } else if sizeTextField.text == "512GB" {
-                    phonePriceLabel.text = "Price: $1929.99"
+                    phonePriceLabel.text = "1929.99"
                 } else {
-                    phonePriceLabel.text = "Price: $2209.99"
+                    phonePriceLabel.text = "2209.99"
                 }
                 
             } else if phoneName == "Galaxy S22" {
                 sizeTextField.text = s23_size[row]
                 if sizeTextField.text == "128GB" {
-                    phonePriceLabel.text = "Price: $969.99"
+                    phonePriceLabel.text = "969.99"
                 } else {
-                    phonePriceLabel.text = "Price: $1049.99"
+                    phonePriceLabel.text = "1049.99"
                 }
                 
             } else if phoneName == "Galaxy S22+" {
                 sizeTextField.text = s23_size[row]
                 if sizeTextField.text == "128GB" {
-                    phonePriceLabel.text = "Price: $1399.99"
+                    phonePriceLabel.text = "1399.99"
                 } else {
-                    phonePriceLabel.text = "Price: $1469.99"
+                    phonePriceLabel.text = "1469.99"
                 }
                 
         
             } else if phoneName == "Galaxy Z Fold4" {
                 sizeTextField.text = s23Ultra_size[row]
                 if sizeTextField.text == "256GB" {
-                    phonePriceLabel.text = "Price: $2269.99.0"
+                    phonePriceLabel.text = "2269.99"
                 } else if sizeTextField.text == "512GB" {
-                    phonePriceLabel.text = "Price: $2429.99"
+                    phonePriceLabel.text = "2429.99"
                 } else {
-                    phonePriceLabel.text = "Price: $2749.99"
+                    phonePriceLabel.text = "2749.99"
                 }
             
             } else if phoneName == "Galaxy Z Flip4" {
                 sizeTextField.text = iPhone14_size[row]
                 if sizeTextField.text == "128GB" {
-                    phonePriceLabel.text = "Price: $1259.99"
+                    phonePriceLabel.text = "1259.99"
                 } else if sizeTextField.text == "256GB" {
-                    phonePriceLabel.text = "Price: $1339.99"
+                    phonePriceLabel.text = "1339.99"
                 } else {
-                    phonePriceLabel.text = "Price: $1499.99"
+                    phonePriceLabel.text = "1499.99"
                 }
                 
             } else if phoneName == "Galaxy S21 FE 5G" {
                 sizeTextField.text = s23_size[row]
                 if sizeTextField.text == "128GB" {
-                    phonePriceLabel.text = "Price: $819.99"
+                    phonePriceLabel.text = "819.99"
                 } else {
-                    phonePriceLabel.text = "Price: $949.99"
+                    phonePriceLabel.text = "949.99"
                 }
                 
             } else if phoneName == "Galaxy Z Flip3 5G" {
                 sizeTextField.text = s23_size[row]
                 if sizeTextField.text == "128GB" {
-                    phonePriceLabel.text = "Price: $1129.99"
+                    phonePriceLabel.text = "1129.99"
                 } else {
-                    phonePriceLabel.text = "Price: $1209.99"
+                    phonePriceLabel.text = "1209.99"
                 }
                 
             } else {
