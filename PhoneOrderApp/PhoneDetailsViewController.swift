@@ -53,16 +53,17 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
     let s23_size = ["128GB","256GB"]
     
     //samsung color list
-    let s23Ultra_color = ["Green","Phantomblack","Lavender","Cream","Graphite","Skyblue","Red","Lime"]
-    let s23_color = ["Green","Phantomblack","Lavender","Cream","Graphite","Lime"]
-    let s22Ultra_color = ["Green","Phantomwhite","Skyblue","Red","Graphite","Burgundy"]
-    let s22_color = ["Green","Phantomblack","Graphite","Bora Purple","Violet","Cream","Skyblue","Pinkgold"]
-    let fold4_color = ["Graygreen","Phantomblack","Burgundy","Beige"]
-    let flip4_color = ["Bora Purple","Graphite","Pinkgold","Blue"]
+    let s23Ultra_color = ["Green","Phantom Black","Lavender","Cream","Graphite","Sky Blue","Red","Lime"]
+    let s23_color = ["Green","Phantom Black","Lavender","Cream","Graphite","Lime"]
+    let s22Ultra_color = ["Green","Phantom White","Sky Blue","Red","Graphite","Burgundy","Phantom Black"]
+    let s22_color = ["Green","Phantom Black","Graphite","Bora Purple","Violet","Cream","Sky Blue","Pink Gold","Phantom White"]
+    let s22plus_color = ["Green","Phantom Black","Graphite","Violet","Cream","Sky Blue","Pink Gold","Phantom White"]
+    let fold4_color = ["Graygreen","Phantom Black","Burgundy","Beige"]
+    let flip4_color = ["Bora Purple","Graphite","Pink Gold","Blue"]
     let s21_color = ["Graphite","Olive","White","Lavender"]
     
     let google_size = ["128GB", "256GB", "512GB"]
-    let color = ["White","Gray"]
+    let color = ["Phantom Black","White","Gray","Pink"]
     
     //used picker view for drop down menu
     var sizePickerView = UIPickerView()
@@ -96,7 +97,7 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
         phoneLabel.text = phoneName
         phoneImageView.image = phoneImage
         brandLabel.text = "Brand: " + brandText
-        phonePriceLabel.text = "Price: $" + String(phonePrice)
+        phonePriceLabel.text = String(phonePrice)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -109,7 +110,7 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
         case 1:
             if phoneName == "iPhone 14 Pro Max" || phoneName == "iPhone 14 Pro" {
                 return apple_size.count
-            } else if phoneName == "iPhone 14" || phoneName == "iPhone 14 Plus" || phoneName == "iPhone 13" || phoneName == "iPhone 13 Mini" || phoneName == "Galaxy S22 Ultra" || phoneName == "Galaxy Z Flip4" {
+            } else if phoneName == "iPhone 14" || phoneName == "iPhone 14 Plus" || phoneName == "iPhone 13" || phoneName == "iPhone 13 Mini" || phoneName == "Galaxy Z Flip4" {
                 return iPhone14_size.count
             } else if phoneName == "iPhone 12" || phoneName == "iPhone SE" {
                 return iPhone12_size.count
@@ -117,11 +118,11 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
                 return pixel7Pro_size.count
             } else if phoneName == "Pixel 6a" {
                 return pixel_size.count
-            } else if phoneName == "Galaxy S23 Ultra" || phoneName == "Galaxy Z Fold4" {
+            } else if phoneName == "Galaxy S23 Ultra" || phoneName == "Galaxy Z Fold4" || phoneName == "Galaxy S22 Ultra" {
                 return s23Ultra_size.count
             } else if phoneName == "Galaxy S23+" {
                 return s23Plus_size.count
-            } else if phoneName == "Galaxy S23" || phoneName == "Galaxy S22" || phoneName == "Galaxy S21 FE 5G" || phoneName == "Galaxy Z Flip3 5G" {
+            } else if phoneName == "Galaxy S23" || phoneName == "Galaxy S22" || phoneName == "Galaxy S21 FE 5G" || phoneName == "Galaxy Z Flip3 5G" || phoneName == "Galaxy S22+"{
                 return s23_size.count
             } else {
                 return google_size.count
@@ -155,6 +156,8 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
                 return s22Ultra_color.count
             } else if phoneName == "Galaxy S22" {
                 return s22_color.count
+            } else if phoneName == "Galaxy S22+" {
+                return s22plus_color.count
             } else if phoneName == "Galaxy Z Fold4" {
                 return fold4_color.count
             } else if phoneName == "Galaxy Z Flip4" {
@@ -173,7 +176,7 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
         case 1:
             if phoneName == "iPhone 14 Pro Max" || phoneName == "iPhone 14 Pro" {
                 return apple_size[row]
-            } else if phoneName == "iPhone 14" || phoneName == "iPhone 14 Plus" || phoneName == "iPhone 13" || phoneName == "iPhone 13 Mini" || phoneName == "Galaxy S22 Ultra" || phoneName == "Galaxy Z Flip4"{
+            } else if phoneName == "iPhone 14" || phoneName == "iPhone 14 Plus" || phoneName == "iPhone 13" || phoneName == "iPhone 13 Mini"  || phoneName == "Galaxy Z Flip4"{
                 return iPhone14_size[row]
             } else if phoneName == "iPhone 12" || phoneName == "iPhone SE" {
                 return iPhone12_size[row]
@@ -181,11 +184,11 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
                 return pixel7Pro_size[row]
             } else if phoneName == "Pixel 6a" {
                 return pixel_size[row]
-            } else if phoneName == "Galaxy S23 Ultra" || phoneName == "Galaxy Z Fold4" {
+            } else if phoneName == "Galaxy S23 Ultra" || phoneName == "Galaxy Z Fold4" || phoneName == "Galaxy S22 Ultra" {
                 return s23Ultra_size[row]
             } else if phoneName == "Galaxy S23+" {
                 return s23Plus_size[row]
-            } else if phoneName == "Galaxy S23" || phoneName == "Galaxy S22" || phoneName == "Galaxy S21 FE 5G" || phoneName == "Galaxy Z Flip3 5G" {
+            } else if phoneName == "Galaxy S23" || phoneName == "Galaxy S22" || phoneName == "Galaxy S21 FE 5G" || phoneName == "Galaxy Z Flip3 5G" || phoneName == "Galaxy S22+" {
                 return s23_size[row]
             } else {
                 return google_size[row]
@@ -219,6 +222,8 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
                 return s22Ultra_color[row]
             } else if phoneName == "Galaxy S22" {
                 return s22_color[row]
+            } else if phoneName == "Galaxy S22+" {
+                return s22plus_color[row]
             } else if phoneName == "Galaxy Z Fold4" {
                 return fold4_color[row]
             } else if phoneName == "Galaxy Z Flip4" {
@@ -239,25 +244,25 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
                 sizeTextField.text = apple_size[row]
                 //change product price due to different storage size
                 if sizeTextField.text == "128GB" {
-                    phonePriceLabel.text = "Price: $1549.0"
+                    phonePriceLabel.text = "1549.0"
                 } else if sizeTextField.text == "256GB" {
-                    phonePriceLabel.text = "Price: $1699.0"
+                    phonePriceLabel.text = "1699.0"
                 } else if sizeTextField.text == "512GB" {
-                    phonePriceLabel.text = "Price: $1969.0"
+                    phonePriceLabel.text = "1969.0"
                 } else {
-                    phonePriceLabel.text = "Price: $2239.0"
+                    phonePriceLabel.text = "2239.0"
                 }
                 
             } else if phoneName == "iPhone 14 Pro" {
                 sizeTextField.text = apple_size[row]
                 if sizeTextField.text == "128GB" {
-                    phonePriceLabel.text = "Price: $1399.0"
+                    phonePriceLabel.text = "1399.0"
                 } else if sizeTextField.text == "256GB" {
-                    phonePriceLabel.text = "Price: $1549.0"
+                    phonePriceLabel.text = "1549.0"
                 } else if sizeTextField.text == "512GB" {
-                    phonePriceLabel.text = "Price: $1819.0"
+                    phonePriceLabel.text = "1819.0"
                 } else {
-                    phonePriceLabel.text = "Price: $2089.0"
+                    phonePriceLabel.text = "2089.0"
                 }
                 
             } else if phoneName == "iPhone 14" {
@@ -355,18 +360,95 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
                     phonePriceLabel.text = "Price: $1309.0"
                 }
             
-                
-            } else if phoneName == "Galaxy S22 Ultra" {
-                sizeTextField.text = iPhone14_size[row]
-            } else if phoneName == "Galaxy Z Flip4" {
-                sizeTextField.text = iPhone14_size[row]
-        
-            } else if phoneName == "Galaxy S23 Ultra" || phoneName == "Galaxy Z Fold4" {
+            } else if phoneName == "Galaxy S23 Ultra" {
                 sizeTextField.text = s23Ultra_size[row]
+                if sizeTextField.text == "256GB" {
+                    phonePriceLabel.text = "Price: $1649.99"
+                } else if sizeTextField.text == "512GB" {
+                    phonePriceLabel.text = "Price: $1889.99"
+                } else {
+                    phonePriceLabel.text = "Price: $2029.99"
+                }
+                
+            } else if phoneName == "Galaxy S23" {
+                sizeTextField.text = s23_size[row]
+                if sizeTextField.text == "128GB" {
+                    phonePriceLabel.text = "Price: $1099.99"
+                } else {
+                    phonePriceLabel.text = "Price: $1179.99"
+                }
+                
             } else if phoneName == "Galaxy S23+" {
                 sizeTextField.text = s23Plus_size[row]
-            } else if phoneName == "Galaxy S23" || phoneName == "Galaxy S22" || phoneName == "Galaxy S21 FE 5G" || phoneName == "Galaxy Z Flip3 5G" {
+                if sizeTextField.text == "256GB" {
+                    phonePriceLabel.text = "Price: $1399.99"
+                } else {
+                    phonePriceLabel.text = "Price: $1559.99"
+                }
+                
+            } else if phoneName == "Galaxy S22 Ultra" {
+                sizeTextField.text = s23Ultra_size[row]
+                if sizeTextField.text == "256GB" {
+                    phonePriceLabel.text = "Price: $1789.99.0"
+                } else if sizeTextField.text == "512GB" {
+                    phonePriceLabel.text = "Price: $1929.99"
+                } else {
+                    phonePriceLabel.text = "Price: $2209.99"
+                }
+                
+            } else if phoneName == "Galaxy S22" {
                 sizeTextField.text = s23_size[row]
+                if sizeTextField.text == "128GB" {
+                    phonePriceLabel.text = "Price: $969.99"
+                } else {
+                    phonePriceLabel.text = "Price: $1049.99"
+                }
+                
+            } else if phoneName == "Galaxy S22+" {
+                sizeTextField.text = s23_size[row]
+                if sizeTextField.text == "128GB" {
+                    phonePriceLabel.text = "Price: $1399.99"
+                } else {
+                    phonePriceLabel.text = "Price: $1469.99"
+                }
+                
+        
+            } else if phoneName == "Galaxy Z Fold4" {
+                sizeTextField.text = s23Ultra_size[row]
+                if sizeTextField.text == "256GB" {
+                    phonePriceLabel.text = "Price: $2269.99.0"
+                } else if sizeTextField.text == "512GB" {
+                    phonePriceLabel.text = "Price: $2429.99"
+                } else {
+                    phonePriceLabel.text = "Price: $2749.99"
+                }
+            
+            } else if phoneName == "Galaxy Z Flip4" {
+                sizeTextField.text = iPhone14_size[row]
+                if sizeTextField.text == "128GB" {
+                    phonePriceLabel.text = "Price: $1259.99"
+                } else if sizeTextField.text == "256GB" {
+                    phonePriceLabel.text = "Price: $1339.99"
+                } else {
+                    phonePriceLabel.text = "Price: $1499.99"
+                }
+                
+            } else if phoneName == "Galaxy S21 FE 5G" {
+                sizeTextField.text = s23_size[row]
+                if sizeTextField.text == "128GB" {
+                    phonePriceLabel.text = "Price: $819.99"
+                } else {
+                    phonePriceLabel.text = "Price: $949.99"
+                }
+                
+            } else if phoneName == "Galaxy Z Flip3 5G" {
+                sizeTextField.text = s23_size[row]
+                if sizeTextField.text == "128GB" {
+                    phonePriceLabel.text = "Price: $1129.99"
+                } else {
+                    phonePriceLabel.text = "Price: $1209.99"
+                }
+                
             } else {
                 sizeTextField.text = google_size[row]
             }
@@ -541,20 +623,163 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
                 
             } else if phoneName == "Galaxy S23 Ultra" {
                 colorTextField.text = s23Ultra_color[row]
-            } else if phoneName == "Galaxy S23+" || phoneName == "Galaxy S23" {
+                if  colorTextField.text == "Green" {
+                    phoneImageView.image = UIImage(named: "s23ultra_green")
+                } else if colorTextField.text == "Lavender" {
+                    phoneImageView.image = UIImage(named: "s23ultra_lavender")
+                } else if colorTextField.text == "Cream" {
+                    phoneImageView.image = UIImage(named: "s23ultra_cream")
+                } else if colorTextField.text == "Graphite" {
+                    phoneImageView.image = UIImage(named: "s23ultra_graphite")
+                } else if colorTextField.text == "Sky Blue" {
+                    phoneImageView.image = UIImage(named: "s23ultra_skyblue")
+                } else if colorTextField.text == "Red" {
+                    phoneImageView.image = UIImage(named: "s23ultra_red")
+                } else if colorTextField.text == "Lime" {
+                    phoneImageView.image = UIImage(named: "s23ultra_lime")
+                } else {
+                    phoneImageView.image = UIImage(named: "s23ultra_black")
+                }
+                
+            } else if phoneName == "Galaxy S23" {
                 colorTextField.text = s23_color[row]
+                if  colorTextField.text == "Green" {
+                    phoneImageView.image = UIImage(named: "s23_green")
+                } else if colorTextField.text == "Lavender" {
+                    phoneImageView.image = UIImage(named: "s23_lavender")
+                } else if colorTextField.text == "Cream" {
+                    phoneImageView.image = UIImage(named: "s23_cream")
+                } else if colorTextField.text == "Graphite" {
+                    phoneImageView.image = UIImage(named: "s23_graphite")
+                } else if colorTextField.text == "Lime" {
+                    phoneImageView.image = UIImage(named: "s23_lime")
+                } else {
+                    phoneImageView.image = UIImage(named: "s23_black")
+                }
+                
+            } else if phoneName == "Galaxy S23+" {
+                colorTextField.text = s23_color[row]
+                if  colorTextField.text == "Green" {
+                    phoneImageView.image = UIImage(named: "s23+_green")
+                } else if colorTextField.text == "Lavender" {
+                    phoneImageView.image = UIImage(named: "s23+_lavender")
+                } else if colorTextField.text == "Cream" {
+                    phoneImageView.image = UIImage(named: "s23+_cream")
+                } else if colorTextField.text == "Graphite" {
+                    phoneImageView.image = UIImage(named: "s23+_graphite")
+                } else if colorTextField.text == "Lime" {
+                    phoneImageView.image = UIImage(named: "s23+_lime")
+                } else {
+                    phoneImageView.image = UIImage(named: "s23+_black")
+                }
+                
             } else if phoneName == "Galaxy S22 Ultra" {
                 colorTextField.text = s22Ultra_color[row]
+                if  colorTextField.text == "Green" {
+                    phoneImageView.image = UIImage(named: "s22ultra_green")
+                } else if colorTextField.text == "Burgundy" {
+                    phoneImageView.image = UIImage(named: "s22ultra_burgundy")
+                } else if colorTextField.text == "Phantom White" {
+                    phoneImageView.image = UIImage(named: "s22ultra_white")
+                } else if colorTextField.text == "Graphite" {
+                    phoneImageView.image = UIImage(named: "s22ultra_graphite")
+                } else if colorTextField.text == "Sky Blue" {
+                    phoneImageView.image = UIImage(named: "s22ultra_blue")
+                } else if colorTextField.text == "Red" {
+                    phoneImageView.image = UIImage(named: "s22ultra_red")
+                } else {
+                    phoneImageView.image = UIImage(named: "s23ultra_black")
+                }
+                
             } else if phoneName == "Galaxy S22" {
                 colorTextField.text = s22_color[row]
+                if  colorTextField.text == "Green" {
+                    phoneImageView.image = UIImage(named: "s22_green")
+                } else if colorTextField.text == "Bora Purple" {
+                    phoneImageView.image = UIImage(named: "s22_purple")
+                } else if colorTextField.text == "Phantom White" {
+                    phoneImageView.image = UIImage(named: "s22_white")
+                } else if colorTextField.text == "Graphite" {
+                    phoneImageView.image = UIImage(named: "s22_graphite")
+                } else if colorTextField.text == "Sky Blue" {
+                    phoneImageView.image = UIImage(named: "s22_skyblue")
+                } else if colorTextField.text == "Pink Gold" {
+                    phoneImageView.image = UIImage(named: "s22_pinkgold")
+                } else if colorTextField.text == "Violet" {
+                    phoneImageView.image = UIImage(named: "s22_violet")
+                } else if colorTextField.text == "Cream" {
+                    phoneImageView.image = UIImage(named: "s22_cream")
+                } else {
+                    phoneImageView.image = UIImage(named: "s22_black")
+                }
+                
+            } else if phoneName == "Galaxy S22+" {
+                colorTextField.text = s22plus_color[row]
+                if  colorTextField.text == "Green" {
+                    phoneImageView.image = UIImage(named: "s22plus_green")
+                } else if colorTextField.text == "Phantom White" {
+                    phoneImageView.image = UIImage(named: "s22plus_white")
+                } else if colorTextField.text == "Graphite" {
+                    phoneImageView.image = UIImage(named: "s22plus_graphite")
+                } else if colorTextField.text == "Sky Blue" {
+                    phoneImageView.image = UIImage(named: "s22plus_blue")
+                } else if colorTextField.text == "Pink Gold" {
+                    phoneImageView.image = UIImage(named: "s22plus_pinkgold")
+                } else if colorTextField.text == "Violet" {
+                    phoneImageView.image = UIImage(named: "s22plus_violet")
+                } else if colorTextField.text == "Cream" {
+                    phoneImageView.image = UIImage(named: "s22plus_cream")
+                } else {
+                    phoneImageView.image = UIImage(named: "s22plus_black")
+                }
+                
             } else if phoneName == "Galaxy Z Fold4" {
                 colorTextField.text = fold4_color[row]
+                if  colorTextField.text == "Beige" {
+                    phoneImageView.image = UIImage(named: "fold4_beige")
+                } else if colorTextField.text == "Graygreen" {
+                    phoneImageView.image = UIImage(named: "fold4_graygreen")
+                } else if colorTextField.text == "Burgundy" {
+                    phoneImageView.image = UIImage(named: "fold4_burgundy")
+                } else {
+                    phoneImageView.image = UIImage(named: "fold4_black")
+                }
+                
             } else if phoneName == "Galaxy Z Flip4" {
                 colorTextField.text = flip4_color[row]
+                if  colorTextField.text == "Bora Purple" {
+                    phoneImageView.image = UIImage(named: "flip4_purple")
+                } else if colorTextField.text == "Graphite" {
+                    phoneImageView.image = UIImage(named: "flip4_graphite")
+                } else if colorTextField.text == "Pink Gold" {
+                    phoneImageView.image = UIImage(named: "flip4_pinkgold")
+                } else {
+                    phoneImageView.image = UIImage(named: "flip4_blue")
+                }
+                
             } else if phoneName == "Galaxy S21 FE 5G" {
                 colorTextField.text = s21_color[row]
+                if  colorTextField.text == "Lavender" {
+                    phoneImageView.image = UIImage(named: "s21_lavender")
+                } else if colorTextField.text == "Graphite" {
+                    phoneImageView.image = UIImage(named: "s21_graphite")
+                } else if colorTextField.text == "White" {
+                    phoneImageView.image = UIImage(named: "s21_white")
+                } else {
+                    phoneImageView.image = UIImage(named: "s21_olive")
+                }
+                
             } else {
                 colorTextField.text = color[row]
+                if  colorTextField.text == "Pink" {
+                    phoneImageView.image = UIImage(named: "flip3_pink")
+                } else if colorTextField.text == "Gray" {
+                    phoneImageView.image = UIImage(named: "flip3_gray")
+                } else if colorTextField.text == "White" {
+                    phoneImageView.image = UIImage(named: "flip3_white")
+                } else {
+                    phoneImageView.image = UIImage(named: "flip3_black")
+                }
             }
             
             colorTextField.resignFirstResponder()
@@ -566,7 +791,7 @@ class PhoneDetailsViewController: UIViewController, UIPickerViewDelegate, UIPick
     @IBAction func onBtnContinueTouchUpInside(_ sender: UIButton) {
         let order = PhoneOrder()
         order.model = phoneName
-        order.price = phonePrice
+        order.price = Double(phonePriceLabel.text!)!
         order.storage = sizeTextField.text!
         order.color = colorTextField.text!
         
